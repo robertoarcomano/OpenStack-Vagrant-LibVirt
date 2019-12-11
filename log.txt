@@ -1,4 +1,4 @@
-START:  Tue 5 Nov 18:00:21 GMT 2019
+START:  Wed Dec 11 13:02:25 GMT 2019
 ==> openstack: Remove stale volume...
 ==> openstack: Domain is not created. Please run `vagrant up` first.
 Bringing machine 'openstack' up with 'libvirt' provider...
@@ -44,19 +44,19 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Key inserted! Disconnecting and reconnecting using new SSH key...
 ==> openstack: Setting hostname...
 ==> openstack: Configuring and enabling network interfaces...
-    openstack: SSH address: 192.168.121.205:22
+    openstack: SSH address: 192.168.121.129:22
     openstack: SSH username: vagrant
     openstack: SSH auth method: private key
 ==> openstack: Rsyncing folder: /home/berto/Desktop/OpenStack-Vagrant-LibVirt/ => /vagrant
 ==> openstack: Running provisioner: shell...
-    openstack: Running: /tmp/vagrant-shell20191105-63162-1au2vcm.sh
+    openstack: Running: /tmp/vagrant-shell20191211-7162-1a90y7g.sh
     openstack: XDG_SESSION_ID=2
     openstack: HOSTNAME=openstack
     openstack: SELINUX_ROLE_REQUESTED=
     openstack: SHELL=/bin/bash
     openstack: TERM=vt100
     openstack: HISTSIZE=1000
-    openstack: SSH_CLIENT=192.168.121.1 54734 22
+    openstack: SSH_CLIENT=192.168.121.1 43860 22
     openstack: SELINUX_USE_CURRENT_RANGE=
     openstack: USER=root
     openstack: SUDO_USER=vagrant
@@ -73,7 +73,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: HOME=/root
     openstack: SUDO_COMMAND=/bin/bash -l
     openstack: LOGNAME=root
-    openstack: SSH_CONNECTION=192.168.121.1 54734 192.168.121.205 22
+    openstack: SSH_CONNECTION=192.168.121.1 43860 192.168.121.129 22
     openstack: LESSOPEN=||/usr/bin/lesspipe.sh %s
     openstack: XDG_RUNTIME_DIR=/run/user/1000
     openstack: SUDO_GID=1000
@@ -86,9 +86,9 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Executing /sbin/chkconfig network on
     openstack: Loaded plugins: fastestmirror
     openstack: Determining fastest mirrors
-    openstack:  * base: mozart.ee.ic.ac.uk
-    openstack:  * extras: mozart.ee.ic.ac.uk
-    openstack:  * updates: mirrors.coreix.net
+    openstack:  * base: mirror.strencom.net
+    openstack:  * extras: repo.uk.bigstepcloud.com
+    openstack:  * updates: repo.uk.bigstepcloud.com
     openstack: Resolving Dependencies
     openstack: --> Running transaction check
     openstack: ---> Package centos-release-openstack-train.noarch 0:1-1.el7.centos will be installed
@@ -128,10 +128,10 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Total download size: 35 k
     openstack: Installed size: 25 k
     openstack: Downloading packages:
-    openstack: Public key for centos-release-nfs-ganesha28-1.0-2.el7.centos.noarch.rpm is not installed
-    openstack: warning: /var/cache/yum/x86_64/7/extras/packages/centos-release-nfs-ganesha28-1.0-2.el7.centos.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    openstack: Public key for centos-release-ceph-nautilus-1.2-2.el7.centos.noarch.rpm is not installed
+    openstack: warning: /var/cache/yum/x86_64/7/extras/packages/centos-release-ceph-nautilus-1.2-2.el7.centos.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
     openstack: --------------------------------------------------------------------------------
-    openstack: Total                                               62 kB/s |  35 kB  00:00     
+    openstack: Total                                               81 kB/s |  35 kB  00:00     
     openstack: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
     openstack: Importing GPG key 0xF4A80EB5:
     openstack:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
@@ -176,16 +176,17 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   centos-release-qemu-ev.noarch 0:1.0-4.el7.centos                              
     openstack:   centos-release-storage-common.noarch 0:2-2.el7.centos                         
     openstack:   centos-release-virt-common.noarch 0:1-1.el7.centos                            
+    openstack: 
     openstack: Complete!
     openstack: Loaded plugins: fastestmirror
     openstack: Loading mirror speeds from cached hostfile
-    openstack:  * base: mozart.ee.ic.ac.uk
-    openstack:  * centos-ceph-nautilus: mozart.ee.ic.ac.uk
+    openstack:  * base: mirror.strencom.net
+    openstack:  * centos-ceph-nautilus: mirror.netweaver.uk
     openstack:  * centos-nfs-ganesha28: mirror.strencom.net
-    openstack:  * centos-openstack-train: mozart.ee.ic.ac.uk
-    openstack:  * centos-qemu-ev: mozart.ee.ic.ac.uk
-    openstack:  * extras: mozart.ee.ic.ac.uk
-    openstack:  * updates: mirrors.coreix.net
+    openstack:  * centos-openstack-train: mirror.netweaver.uk
+    openstack:  * centos-qemu-ev: mirror.strencom.net
+    openstack:  * extras: repo.uk.bigstepcloud.com
+    openstack:  * updates: repo.uk.bigstepcloud.com
     openstack: Resolving Dependencies
     openstack: --> Running transaction check
     openstack: ---> Package GeoIP.x86_64 0:1.5.0-13.el7 will be updated
@@ -213,6 +214,8 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package binutils.x86_64 0:2.27-41.base.el7_7.1 will be an update
     openstack: ---> Package biosdevname.x86_64 0:0.7.3-1.el7 will be updated
     openstack: ---> Package biosdevname.x86_64 0:0.7.3-2.el7 will be an update
+    openstack: ---> Package ca-certificates.noarch 0:2018.2.22-70.0.el7_5 will be updated
+    openstack: ---> Package ca-certificates.noarch 0:2019.2.32-76.el7_7 will be an update
     openstack: ---> Package centos-release.x86_64 0:7-6.1810.2.el7.centos will be updated
     openstack: ---> Package centos-release.x86_64 0:7-7.1908.0.el7.centos will be an update
     openstack: ---> Package chrony.x86_64 0:3.2-2.el7 will be updated
@@ -228,7 +231,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package cups-libs.x86_64 1:1.6.3-35.el7 will be updated
     openstack: ---> Package cups-libs.x86_64 1:1.6.3-40.el7 will be an update
     openstack: ---> Package curl.x86_64 0:7.29.0-51.el7 will be updated
-    openstack: ---> Package curl.x86_64 0:7.29.0-54.el7 will be an update
+    openstack: ---> Package curl.x86_64 0:7.29.0-54.el7_7.1 will be an update
     openstack: ---> Package device-mapper.x86_64 7:1.02.149-10.el7_6.7 will be updated
     openstack: ---> Package device-mapper.x86_64 7:1.02.158-2.el7_7.2 will be an update
     openstack: ---> Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.7 will be updated
@@ -296,7 +299,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package initscripts.x86_64 0:9.49.46-1.el7 will be updated
     openstack: ---> Package initscripts.x86_64 0:9.49.47-1.el7 will be an update
     openstack: ---> Package iproute.x86_64 0:4.11.0-14.el7_6.2 will be updated
-    openstack: ---> Package iproute.x86_64 0:4.11.0-25.el7 will be an update
+    openstack: ---> Package iproute.x86_64 0:4.11.0-25.el7_7.2 will be an update
     openstack: ---> Package iprutils.x86_64 0:2.4.16.1-1.el7 will be updated
     openstack: ---> Package iprutils.x86_64 0:2.4.17.1-2.el7 will be an update
     openstack: ---> Package ipset.x86_64 0:6.38-3.el7_6 will be updated
@@ -307,11 +310,11 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package iptables.x86_64 0:1.4.21-33.el7 will be an update
     openstack: ---> Package irqbalance.x86_64 3:1.0.7-11.el7 will be updated
     openstack: ---> Package irqbalance.x86_64 3:1.0.7-12.el7 will be an update
-    openstack: ---> Package kernel.x86_64 0:3.10.0-1062.4.1.el7 will be installed
+    openstack: ---> Package kernel.x86_64 0:3.10.0-1062.9.1.el7 will be installed
     openstack: ---> Package kernel-tools.x86_64 0:3.10.0-957.12.2.el7 will be updated
-    openstack: ---> Package kernel-tools.x86_64 0:3.10.0-1062.4.1.el7 will be an update
+    openstack: ---> Package kernel-tools.x86_64 0:3.10.0-1062.9.1.el7 will be an update
     openstack: ---> Package kernel-tools-libs.x86_64 0:3.10.0-957.12.2.el7 will be updated
-    openstack: ---> Package kernel-tools-libs.x86_64 0:3.10.0-1062.4.1.el7 will be an update
+    openstack: ---> Package kernel-tools-libs.x86_64 0:3.10.0-1062.9.1.el7 will be an update
     openstack: ---> Package kmod.x86_64 0:20-23.el7 will be updated
     openstack: ---> Package kmod.x86_64 0:20-25.el7 will be an update
     openstack: ---> Package kmod-libs.x86_64 0:20-23.el7 will be updated
@@ -321,13 +324,13 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package krb5-libs.x86_64 0:1.15.1-37.el7_6 will be updated
     openstack: ---> Package krb5-libs.x86_64 0:1.15.1-37.el7_7.2 will be an update
     openstack: ---> Package libblkid.x86_64 0:2.23.2-59.el7_6.1 will be updated
-    openstack: ---> Package libblkid.x86_64 0:2.23.2-61.el7 will be an update
+    openstack: ---> Package libblkid.x86_64 0:2.23.2-61.el7_7.1 will be an update
     openstack: ---> Package libcap.x86_64 0:2.22-9.el7 will be updated
     openstack: ---> Package libcap.x86_64 0:2.22-10.el7 will be an update
     openstack: ---> Package libcom_err.x86_64 0:1.42.9-13.el7 will be updated
     openstack: ---> Package libcom_err.x86_64 0:1.42.9-16.el7 will be an update
     openstack: ---> Package libcurl.x86_64 0:7.29.0-51.el7 will be updated
-    openstack: ---> Package libcurl.x86_64 0:7.29.0-54.el7 will be an update
+    openstack: ---> Package libcurl.x86_64 0:7.29.0-54.el7_7.1 will be an update
     openstack: ---> Package libdb.x86_64 0:5.3.21-24.el7 will be updated
     openstack: ---> Package libdb.x86_64 0:5.3.21-25.el7 will be an update
     openstack: ---> Package libdb-utils.x86_64 0:5.3.21-24.el7 will be updated
@@ -343,7 +346,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package libldb.x86_64 0:1.3.4-1.el7 will be updated
     openstack: ---> Package libldb.x86_64 0:1.4.2-1.el7 will be an update
     openstack: ---> Package libmount.x86_64 0:2.23.2-59.el7_6.1 will be updated
-    openstack: ---> Package libmount.x86_64 0:2.23.2-61.el7 will be an update
+    openstack: ---> Package libmount.x86_64 0:2.23.2-61.el7_7.1 will be an update
     openstack: ---> Package libmspack.x86_64 0:0.5-0.6.alpha.el7 will be updated
     openstack: ---> Package libmspack.x86_64 0:0.5-0.7.alpha.el7 will be an update
     openstack: ---> Package libndp.x86_64 0:1.2-7.el7 will be updated
@@ -351,7 +354,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package libseccomp.x86_64 0:2.3.1-3.el7 will be updated
     openstack: ---> Package libseccomp.x86_64 0:2.4.1-0.el7 will be an update
     openstack: ---> Package libsmartcols.x86_64 0:2.23.2-59.el7_6.1 will be updated
-    openstack: ---> Package libsmartcols.x86_64 0:2.23.2-61.el7 will be an update
+    openstack: ---> Package libsmartcols.x86_64 0:2.23.2-61.el7_7.1 will be an update
     openstack: ---> Package libss.x86_64 0:1.42.9-13.el7 will be updated
     openstack: ---> Package libss.x86_64 0:1.42.9-16.el7 will be an update
     openstack: ---> Package libssh2.x86_64 0:1.4.3-12.el7_6.2 will be updated
@@ -369,9 +372,9 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package libtirpc.x86_64 0:0.2.4-0.15.el7 will be updated
     openstack: ---> Package libtirpc.x86_64 0:0.2.4-0.16.el7 will be an update
     openstack: ---> Package libuuid.x86_64 0:2.23.2-59.el7_6.1 will be updated
-    openstack: ---> Package libuuid.x86_64 0:2.23.2-61.el7 will be an update
+    openstack: ---> Package libuuid.x86_64 0:2.23.2-61.el7_7.1 will be an update
     openstack: ---> Package libwbclient.x86_64 0:4.8.3-4.el7 will be updated
-    openstack: ---> Package libwbclient.x86_64 0:4.9.1-6.el7 will be an update
+    openstack: ---> Package libwbclient.x86_64 0:4.9.1-10.el7_7 will be an update
     openstack: ---> Package linux-firmware.noarch 0:20180911-69.git85c5d90.el7 will be updated
     openstack: ---> Package linux-firmware.noarch 0:20190429-72.gitddde598.el7 will be an update
     openstack: ---> Package lshw.x86_64 0:B.02.18-12.el7 will be updated
@@ -402,7 +405,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package nss-util.x86_64 0:3.36.0-1.1.el7_6 will be updated
     openstack: ---> Package nss-util.x86_64 0:3.44.0-3.el7 will be an update
     openstack: ---> Package numactl-libs.x86_64 0:2.0.9-7.el7 will be updated
-    openstack: ---> Package numactl-libs.x86_64 0:2.0.12-3.el7 will be an update
+    openstack: ---> Package numactl-libs.x86_64 0:2.0.12-3.el7_7.1 will be an update
     openstack: ---> Package open-vm-tools.x86_64 0:10.2.5-3.el7 will be updated
     openstack: ---> Package open-vm-tools.x86_64 0:10.3.0-2.el7 will be an update
     openstack: ---> Package openssh.x86_64 0:7.4p1-16.el7 will be updated
@@ -435,7 +438,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package python-linux-procfs.noarch 0:0.4.9-4.el7 will be updated
     openstack: ---> Package python-linux-procfs.noarch 0:0.4.11-4.el7 will be an update
     openstack: ---> Package python-perf.x86_64 0:3.10.0-957.12.2.el7 will be updated
-    openstack: ---> Package python-perf.x86_64 0:3.10.0-1062.4.1.el7 will be an update
+    openstack: ---> Package python-perf.x86_64 0:3.10.0-1062.9.1.el7 will be an update
     openstack: ---> Package python-pyudev.noarch 0:0.15-9.el7 will be obsoleted
     openstack: ---> Package python2-chardet.noarch 0:3.0.4-7.el7 will be obsoleting
     openstack: ---> Package python2-pyudev.noarch 0:0.18.1-6.el7 will be obsoleting
@@ -461,15 +464,15 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package rsyslog.x86_64 0:8.24.0-34.el7 will be updated
     openstack: ---> Package rsyslog.x86_64 0:8.24.0-41.el7_7.2 will be an update
     openstack: ---> Package samba-client-libs.x86_64 0:4.8.3-4.el7 will be updated
-    openstack: ---> Package samba-client-libs.x86_64 0:4.9.1-6.el7 will be an update
+    openstack: ---> Package samba-client-libs.x86_64 0:4.9.1-10.el7_7 will be an update
     openstack: ---> Package samba-common.noarch 0:4.8.3-4.el7 will be updated
-    openstack: ---> Package samba-common.noarch 0:4.9.1-6.el7 will be an update
+    openstack: ---> Package samba-common.noarch 0:4.9.1-10.el7_7 will be an update
     openstack: ---> Package samba-common-libs.x86_64 0:4.8.3-4.el7 will be updated
-    openstack: ---> Package samba-common-libs.x86_64 0:4.9.1-6.el7 will be an update
+    openstack: ---> Package samba-common-libs.x86_64 0:4.9.1-10.el7_7 will be an update
     openstack: ---> Package selinux-policy.noarch 0:3.13.1-229.el7_6.12 will be updated
-    openstack: ---> Package selinux-policy.noarch 0:3.13.1-252.el7.1 will be an update
+    openstack: ---> Package selinux-policy.noarch 0:3.13.1-252.el7_7.6 will be an update
     openstack: ---> Package selinux-policy-targeted.noarch 0:3.13.1-229.el7_6.12 will be updated
-    openstack: ---> Package selinux-policy-targeted.noarch 0:3.13.1-252.el7.1 will be an update
+    openstack: ---> Package selinux-policy-targeted.noarch 0:3.13.1-252.el7_7.6 will be an update
     openstack: ---> Package sg3_utils.x86_64 0:1.37-17.el7 will be updated
     openstack: ---> Package sg3_utils.x86_64 0:1.37-18.el7_7.1 will be an update
     openstack: ---> Package sg3_utils-libs.x86_64 0:1.37-17.el7 will be updated
@@ -491,7 +494,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: ---> Package tzdata.noarch 0:2019a-1.el7 will be updated
     openstack: ---> Package tzdata.noarch 0:2019c-1.el7 will be an update
     openstack: ---> Package util-linux.x86_64 0:2.23.2-59.el7_6.1 will be updated
-    openstack: ---> Package util-linux.x86_64 0:2.23.2-61.el7 will be an update
+    openstack: ---> Package util-linux.x86_64 0:2.23.2-61.el7_7.1 will be an update
     openstack: ---> Package vim-minimal.x86_64 2:7.4.160-5.el7 will be updated
     openstack: ---> Package vim-minimal.x86_64 2:7.4.629-6.el7 will be an update
     openstack: ---> Package xfsprogs.x86_64 0:4.5.0-19.el7_6 will be updated
@@ -518,7 +521,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  Package             Arch   Version                Repository              Size
     openstack: ================================================================================
     openstack: Installing:
-    openstack:  kernel              x86_64 3.10.0-1062.4.1.el7    updates                 50 M
+    openstack:  kernel              x86_64 3.10.0-1062.9.1.el7    updates                 50 M
     openstack:  python2-chardet     noarch 3.0.4-7.el7            centos-openstack-train 186 k
     openstack:      replacing  python-chardet.noarch 2.2.1-1.el7_1
     openstack:  python2-pyudev      noarch 0.18.1-6.el7           centos-openstack-train  73 k
@@ -537,6 +540,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  bind-license        noarch 32:9.11.4-9.P2.el7     base                    88 k
     openstack:  binutils            x86_64 2.27-41.base.el7_7.1   updates                5.9 M
     openstack:  biosdevname         x86_64 0.7.3-2.el7            base                    38 k
+    openstack:  ca-certificates     noarch 2019.2.32-76.el7_7     updates                399 k
     openstack:  centos-release      x86_64 7-7.1908.0.el7.centos  base                    26 k
     openstack:  chrony              x86_64 3.4-1.el7              base                   251 k
     openstack:  coreutils           x86_64 8.22-24.el7            base                   3.3 M
@@ -544,7 +548,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  cronie-anacron      x86_64 1.4.11-23.el7          base                    36 k
     openstack:  cryptsetup-libs     x86_64 2.0.3-5.el7            base                   338 k
     openstack:  cups-libs           x86_64 1:1.6.3-40.el7         base                   358 k
-    openstack:  curl                x86_64 7.29.0-54.el7          base                   270 k
+    openstack:  curl                x86_64 7.29.0-54.el7_7.1      updates                270 k
     openstack:  device-mapper       x86_64 7:1.02.158-2.el7_7.2   updates                294 k
     openstack:  device-mapper-libs  x86_64 7:1.02.158-2.el7_7.2   updates                322 k
     openstack:  dhclient            x86_64 12:4.2.5-77.el7.centos base                   285 k
@@ -579,22 +583,22 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  hostname            x86_64 3.13-3.el7_7.1         updates                 17 k
     openstack:  hwdata              x86_64 0.252-9.3.el7          base                   2.4 M
     openstack:  initscripts         x86_64 9.49.47-1.el7          base                   439 k
-    openstack:  iproute             x86_64 4.11.0-25.el7          base                   803 k
+    openstack:  iproute             x86_64 4.11.0-25.el7_7.2      updates                803 k
     openstack:  iprutils            x86_64 2.4.17.1-2.el7         base                   243 k
     openstack:  ipset               x86_64 7.1-1.el7              base                    39 k
     openstack:  ipset-libs          x86_64 7.1-1.el7              base                    64 k
     openstack:  iptables            x86_64 1.4.21-33.el7          base                   433 k
     openstack:  irqbalance          x86_64 3:1.0.7-12.el7         base                    45 k
-    openstack:  kernel-tools        x86_64 3.10.0-1062.4.1.el7    updates                7.8 M
-    openstack:  kernel-tools-libs   x86_64 3.10.0-1062.4.1.el7    updates                7.7 M
+    openstack:  kernel-tools        x86_64 3.10.0-1062.9.1.el7    updates                7.8 M
+    openstack:  kernel-tools-libs   x86_64 3.10.0-1062.9.1.el7    updates                7.8 M
     openstack:  kmod                x86_64 20-25.el7              base                   122 k
     openstack:  kmod-libs           x86_64 20-25.el7              base                    51 k
     openstack:  kpartx              x86_64 0.4.9-127.el7          base                    78 k
     openstack:  krb5-libs           x86_64 1.15.1-37.el7_7.2      updates                805 k
-    openstack:  libblkid            x86_64 2.23.2-61.el7          base                   181 k
+    openstack:  libblkid            x86_64 2.23.2-61.el7_7.1      updates                181 k
     openstack:  libcap              x86_64 2.22-10.el7            base                    47 k
     openstack:  libcom_err          x86_64 1.42.9-16.el7          base                    41 k
-    openstack:  libcurl             x86_64 7.29.0-54.el7          base                   222 k
+    openstack:  libcurl             x86_64 7.29.0-54.el7_7.1      updates                223 k
     openstack:  libdb               x86_64 5.3.21-25.el7          base                   720 k
     openstack:  libdb-utils         x86_64 5.3.21-25.el7          base                   132 k
     openstack:  libdrm              x86_64 2.4.97-2.el7           base                   151 k
@@ -602,11 +606,11 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  libgomp             x86_64 4.8.5-39.el7           base                   158 k
     openstack:  libicu              x86_64 50.2-3.el7             base                   6.9 M
     openstack:  libldb              x86_64 1.4.2-1.el7            base                   144 k
-    openstack:  libmount            x86_64 2.23.2-61.el7          base                   183 k
+    openstack:  libmount            x86_64 2.23.2-61.el7_7.1      updates                183 k
     openstack:  libmspack           x86_64 0.5-0.7.alpha.el7      base                    64 k
     openstack:  libndp              x86_64 1.2-9.el7              base                    32 k
     openstack:  libseccomp          x86_64 2.4.1-0.el7            centos-openstack-train  61 k
-    openstack:  libsmartcols        x86_64 2.23.2-61.el7          base                   141 k
+    openstack:  libsmartcols        x86_64 2.23.2-61.el7_7.1      updates                141 k
     openstack:  libss               x86_64 1.42.9-16.el7          base                    46 k
     openstack:  libssh2             x86_64 1.8.0-3.el7            base                    88 k
     openstack:  libstdc++           x86_64 4.8.5-39.el7           base                   305 k
@@ -615,8 +619,8 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  libteam             x86_64 1.27-9.el7             base                    49 k
     openstack:  libtevent           x86_64 0.9.37-1.el7           base                    40 k
     openstack:  libtirpc            x86_64 0.2.4-0.16.el7         base                    89 k
-    openstack:  libuuid             x86_64 2.23.2-61.el7          base                    83 k
-    openstack:  libwbclient         x86_64 4.9.1-6.el7            base                   110 k
+    openstack:  libuuid             x86_64 2.23.2-61.el7_7.1      updates                 83 k
+    openstack:  libwbclient         x86_64 4.9.1-10.el7_7         updates                111 k
     openstack:  linux-firmware      noarch 20190429-72.gitddde598.el7
     openstack:                                                    base                    73 M
     openstack:  lshw                x86_64 B.02.18-13.el7         base                   321 k
@@ -633,7 +637,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  nss-sysinit         x86_64 3.44.0-4.el7           base                    64 k
     openstack:  nss-tools           x86_64 3.44.0-4.el7           base                   528 k
     openstack:  nss-util            x86_64 3.44.0-3.el7           base                    79 k
-    openstack:  numactl-libs        x86_64 2.0.12-3.el7           base                    30 k
+    openstack:  numactl-libs        x86_64 2.0.12-3.el7_7.1       updates                 30 k
     openstack:  open-vm-tools       x86_64 10.3.0-2.el7           base                   671 k
     openstack:  openssh             x86_64 7.4p1-21.el7           base                   510 k
     openstack:  openssh-clients     x86_64 7.4p1-21.el7           base                   655 k
@@ -649,7 +653,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  python-firewall     noarch 0.6.3-2.el7_7.2        updates                352 k
     openstack:  python-libs         x86_64 2.7.5-86.el7           base                   5.6 M
     openstack:  python-linux-procfs noarch 0.4.11-4.el7           base                    33 k
-    openstack:  python-perf         x86_64 3.10.0-1062.4.1.el7    updates                7.8 M
+    openstack:  python-perf         x86_64 3.10.0-1062.9.1.el7    updates                7.8 M
     openstack:  qemu-guest-agent    x86_64 10:2.12.0-3.el7        base                   116 k
     openstack:  quota               x86_64 1:4.01-19.el7          base                   179 k
     openstack:  quota-nls           noarch 1:4.01-19.el7          base                    90 k
@@ -660,12 +664,12 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  rpm-libs            x86_64 4.11.3-40.el7          base                   278 k
     openstack:  rpm-python          x86_64 4.11.3-40.el7          base                    83 k
     openstack:  rsyslog             x86_64 8.24.0-41.el7_7.2      updates                616 k
-    openstack:  samba-client-libs   x86_64 4.9.1-6.el7            base                   4.9 M
-    openstack:  samba-common        noarch 4.9.1-6.el7            base                   209 k
-    openstack:  samba-common-libs   x86_64 4.9.1-6.el7            base                   170 k
-    openstack:  selinux-policy      noarch 3.13.1-252.el7.1       updates                492 k
+    openstack:  samba-client-libs   x86_64 4.9.1-10.el7_7         updates                4.9 M
+    openstack:  samba-common        noarch 4.9.1-10.el7_7         updates                210 k
+    openstack:  samba-common-libs   x86_64 4.9.1-10.el7_7         updates                171 k
+    openstack:  selinux-policy      noarch 3.13.1-252.el7_7.6     updates                492 k
     openstack:  selinux-policy-targeted
-    openstack:                      noarch 3.13.1-252.el7.1       updates                7.0 M
+    openstack:                      noarch 3.13.1-252.el7_7.6     updates                7.0 M
     openstack:  sg3_utils           x86_64 1.37-18.el7_7.1        updates                646 k
     openstack:  sg3_utils-libs      x86_64 1.37-18.el7_7.1        updates                 65 k
     openstack:  shadow-utils        x86_64 2:4.6-5.el7            base                   1.2 M
@@ -676,7 +680,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:  teamd               x86_64 1.27-9.el7             base                   113 k
     openstack:  tuned               noarch 2.11.0-5.el7_7.1       updates                268 k
     openstack:  tzdata              noarch 2019c-1.el7            updates                493 k
-    openstack:  util-linux          x86_64 2.23.2-61.el7          base                   2.0 M
+    openstack:  util-linux          x86_64 2.23.2-61.el7_7.1      updates                2.0 M
     openstack:  vim-minimal         x86_64 2:7.4.629-6.el7        base                   443 k
     openstack:  xfsprogs            x86_64 4.5.0-20.el7           base                   896 k
     openstack:  yum                 noarch 3.4.3-163.el7.centos   base                   1.2 M
@@ -695,7 +699,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Transaction Summary
     openstack: ================================================================================
     openstack: Install    3 Packages (+5 Dependent packages)
-    openstack: Upgrade  152 Packages
+    openstack: Upgrade  153 Packages
     openstack: Total download size: 254 M
     openstack: Downloading packages:
     openstack: No Presto metadata available for centos-openstack-train
@@ -706,7 +710,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Public key for python2-six-1.12.0-1.el7.noarch.rpm is not installed
     openstack: warning: /var/cache/yum/x86_64/7/centos-ceph-nautilus/packages/python2-six-1.12.0-1.el7.noarch.rpm: Header V4 RSA/SHA1 Signature, key ID e451e5b5: NOKEY
     openstack: --------------------------------------------------------------------------------
-    openstack: Total                                              9.9 MB/s | 254 MB  00:25     
+    openstack: Total                                              5.6 MB/s | 254 MB  00:45     
     openstack: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
     openstack: Importing GPG key 0x764429E6:
     openstack:  Userid     : "CentOS Cloud SIG (http://wiki.centos.org/SpecialInterestGroup/Cloud) <security@centos.org>"
@@ -723,1134 +727,1134 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Running transaction test
     openstack: Transaction test succeeded
     openstack: Running transaction
-    openstack:   Updating   : libgcc-4.8.5-39.el7.x86_64                                 1/314
+    openstack:   Updating   : libgcc-4.8.5-39.el7.x86_64                                 1/316
     openstack:  
-    openstack:   Updating   : 1:grub2-common-2.02-0.80.el7.centos.noarch                 2/314
+    openstack:   Updating   : 1:grub2-common-2.02-0.80.el7.centos.noarch                 2/316
     openstack:  
-    openstack:   Updating   : centos-release-7-7.1908.0.el7.centos.x86_64                3/314
+    openstack:   Updating   : centos-release-7-7.1908.0.el7.centos.x86_64                3/316
     openstack:  
-    openstack:   Updating   : 1:grub2-pc-modules-2.02-0.80.el7.centos.noarch             4/314
+    openstack:   Updating   : 1:grub2-pc-modules-2.02-0.80.el7.centos.noarch             4/316
     openstack:  
-    openstack:   Updating   : 1:quota-nls-4.01-19.el7.noarch                             5/314
+    openstack:   Updating   : 1:quota-nls-4.01-19.el7.noarch                             5/316
     openstack:  
-    openstack:   Installing : 3:mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64             6/314
+    openstack:   Installing : 3:mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64             6/316
     openstack:  
-    openstack:   Updating   : firewalld-filesystem-0.6.3-2.el7_7.2.noarch                7/314
+    openstack:   Updating   : firewalld-filesystem-0.6.3-2.el7_7.2.noarch                7/316
     openstack:  
-    openstack:   Updating   : 32:bind-license-9.11.4-9.P2.el7.noarch                     8/314
+    openstack:   Updating   : 32:bind-license-9.11.4-9.P2.el7.noarch                     8/316
     openstack:  
-    openstack:   Updating   : tzdata-2019c-1.el7.noarch                                  9/314
+    openstack:   Updating   : tzdata-2019c-1.el7.noarch                                  9/316
     openstack:  
-    openstack:   Updating   : bash-4.2.46-33.el7.x86_64                                 10/314
+    openstack:   Updating   : bash-4.2.46-33.el7.x86_64                                 10/316
     openstack:  
-    openstack:   Updating   : nss-softokn-freebl-3.44.0-5.el7.x86_64                    11/314
+    openstack:   Updating   : nss-softokn-freebl-3.44.0-5.el7.x86_64                    11/316
     openstack:  
-    openstack:   Updating   : glibc-common-2.17-292.el7.x86_64                          12/314
+    openstack:   Updating   : glibc-common-2.17-292.el7.x86_64                          12/316
     openstack:  
-    openstack:   Updating   : glibc-2.17-292.el7.x86_64                                 13/314
+    openstack:   Updating   : glibc-2.17-292.el7.x86_64                                 13/316
     openstack:  
     openstack: warning: /etc/nsswitch.conf created as /etc/nsswitch.conf.rpmnew
-    openstack:   Updating   : nspr-4.21.0-1.el7.x86_64                                  14/314
+    openstack:   Updating   : nspr-4.21.0-1.el7.x86_64                                  14/316
     openstack:  
-    openstack:   Updating   : nss-util-3.44.0-3.el7.x86_64                              15/314
+    openstack:   Updating   : nss-util-3.44.0-3.el7.x86_64                              15/316
     openstack:  
-    openstack:   Updating   : libcom_err-1.42.9-16.el7.x86_64                           16/314
+    openstack:   Updating   : libcom_err-1.42.9-16.el7.x86_64                           16/316
     openstack:  
-    openstack:   Updating   : audit-libs-2.8.5-4.el7.x86_64                             17/314
+    openstack:   Updating   : audit-libs-2.8.5-4.el7.x86_64                             17/316
     openstack:  
-    openstack:   Updating   : libcap-2.22-10.el7.x86_64                                 18/314
+    openstack:   Updating   : libcap-2.22-10.el7.x86_64                                 18/316
     openstack:  
-    openstack:   Updating   : 1:openssl-libs-1.0.2k-19.el7.x86_64                       19/314
+    openstack:   Updating   : libuuid-2.23.2-61.el7_7.1.x86_64                          19/316
     openstack:  
-    openstack:   Updating   : coreutils-8.22-24.el7.x86_64                              20/314
+    openstack:   Updating   : libdb-5.3.21-25.el7.x86_64                                20/316
     openstack:  
-    openstack:   Updating   : krb5-libs-1.15.1-37.el7_7.2.x86_64                        21/314
+    openstack:   Updating   : elfutils-libelf-0.176-2.el7.x86_64                        21/316
     openstack:  
-    openstack:   Updating   : libuuid-2.23.2-61.el7.x86_64                              22/314
+    openstack:   Updating   : libstdc++-4.8.5-39.el7.x86_64                             22/316
     openstack:  
-    openstack:   Updating   : libblkid-2.23.2-61.el7.x86_64                             23/314
+    openstack:   Updating   : readline-6.2-11.el7.x86_64                                23/316
     openstack:  
-    openstack:   Updating   : 2:shadow-utils-4.6-5.el7.x86_64                           24/314
+    openstack:   Updating   : libtalloc-2.1.14-1.el7.x86_64                             24/316
+    openstack:  
+    openstack:   Updating   : diffutils-3.3-5.el7.x86_64                                25/316
+    openstack:  
+    openstack:   Updating   : libtdb-1.3.16-1.el7.x86_64                                26/316
+    openstack:  
+    openstack:   Updating   : libtevent-0.9.37-1.el7.x86_64                             27/316
+    openstack:  
+    openstack:   Updating   : e2fsprogs-libs-1.42.9-16.el7.x86_64                       28/316
+    openstack:  
+    openstack:   Updating   : nss-softokn-3.44.0-5.el7.x86_64                           29/316
+    openstack:  
+    openstack:   Updating   : lz4-1.7.5-3.el7.x86_64                                    30/316
+    openstack:  
+    openstack:   Updating   : iptables-1.4.21-33.el7.x86_64                             31/316
+    openstack:  
+    openstack:   Updating   : iproute-4.11.0-25.el7_7.2.x86_64                          32/316
+    openstack:  
+    openstack:   Updating   : hostname-3.13-3.el7_7.1.x86_64                            33/316
+    openstack:  
+    openstack:   Updating   : libldb-1.4.2-1.el7.x86_64                                 34/316
+    openstack:  
+    openstack:   Updating   : libicu-50.2-3.el7.x86_64                                  35/316
+    openstack:  
+    openstack:   Updating   : libdb-utils-5.3.21-25.el7.x86_64                          36/316
+    openstack:  
+    openstack:   Updating   : libss-1.42.9-16.el7.x86_64                                37/316
+    openstack:  
+    openstack:   Installing : 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64            38/316
+    openstack:  
+    openstack:   Updating   : libmspack-0.5-0.7.alpha.el7.x86_64                        39/316
+    openstack:  
+    openstack:   Updating   : freetype-2.8-14.el7.x86_64                                40/316
+    openstack:  
+    openstack:   Updating   : sg3_utils-libs-1.37-18.el7_7.1.x86_64                     41/316
+    openstack:  
+    openstack:   Updating   : libteam-1.27-9.el7.x86_64                                 42/316
+    openstack:  
+    openstack:   Updating   : teamd-1.27-9.el7.x86_64                                   43/316
+    openstack:  
+    openstack:   Updating   : 1:make-3.82-24.el7.x86_64                                 44/316
+    openstack:  
+    openstack:   Updating   : 2:vim-minimal-7.4.629-6.el7.x86_64                        45/316
+    openstack:  
+    openstack:   Updating   : ipset-libs-7.1-1.el7.x86_64                               46/316
+    openstack:  
+    openstack:   Updating   : ipset-7.1-1.el7.x86_64                                    47/316
+    openstack:  
+    openstack:   Updating   : kmod-libs-20-25.el7.x86_64                                48/316
+    openstack:  
+    openstack:   Updating   : 2:ethtool-4.8-10.el7.x86_64                               49/316
+    openstack:  
+    openstack:   Updating   : kernel-tools-libs-3.10.0-1062.9.1.el7.x86_64              50/316
+    openstack:  
+    openstack:   Updating   : numactl-libs-2.0.12-3.el7_7.1.x86_64                      51/316
+    openstack:  
+    openstack:   Updating   : libndp-1.2-9.el7.x86_64                                   52/316
+    openstack:  
+    openstack:   Updating   : libseccomp-2.4.1-0.el7.x86_64                             53/316
+    openstack:  
+    openstack:   Updating   : libsmartcols-2.23.2-61.el7_7.1.x86_64                     54/316
+    openstack:  
+    openstack:   Updating   : ca-certificates-2019.2.32-76.el7_7.noarch                 55/316
+    openstack:  
+    openstack:   Updating   : 1:openssl-libs-1.0.2k-19.el7.x86_64                       56/316
+    openstack:  
+    openstack:   Updating   : coreutils-8.22-24.el7.x86_64                              57/316
+    openstack:  
+    openstack:   Updating   : krb5-libs-1.15.1-37.el7_7.2.x86_64                        58/316
+    openstack:  
+    openstack:   Updating   : libblkid-2.23.2-61.el7_7.1.x86_64                         59/316
+    openstack:  
+    openstack:   Updating   : 2:shadow-utils-4.6-5.el7.x86_64                           60/316
     openstack:  
     openstack: warning: /etc/login.defs created as /etc/login.defs.rpmnew
-    openstack:   Updating   : libdb-5.3.21-25.el7.x86_64                                25/314
+    openstack:   Updating   : libmount-2.23.2-61.el7_7.1.x86_64                         61/316
     openstack:  
-    openstack:   Updating   : elfutils-libelf-0.176-2.el7.x86_64                        26/314
+    openstack:   Updating   : glib2-2.56.1-5.el7.x86_64                                 62/316
     openstack:  
-    openstack:   Updating   : libstdc++-4.8.5-39.el7.x86_64                             27/314
+    openstack:   Updating   : python-libs-2.7.5-86.el7.x86_64                           63/316
     openstack:  
-    openstack:   Updating   : libmount-2.23.2-61.el7.x86_64                             28/314
+    openstack:   Updating   : python-2.7.5-86.el7.x86_64                                64/316
     openstack:  
-    openstack:   Updating   : glib2-2.56.1-5.el7.x86_64                                 29/314
+    openstack:   Updating   : libtirpc-0.2.4-0.16.el7.x86_64                            65/316
     openstack:  
-    openstack:   Updating   : readline-6.2-11.el7.x86_64                                30/314
+    openstack:   Installing : python2-six-1.12.0-1.el7.noarch                           66/316
     openstack:  
-    openstack:   Updating   : libtalloc-2.1.14-1.el7.x86_64                             31/314
+    openstack:   Updating   : python-perf-3.10.0-1062.9.1.el7.x86_64                    67/316
     openstack:  
-    openstack:   Updating   : diffutils-3.3-5.el7.x86_64                                32/314
+    openstack:   Updating   : python-linux-procfs-0.4.11-4.el7.noarch                   68/316
     openstack:  
-    openstack:   Updating   : python-libs-2.7.5-86.el7.x86_64                           33/314
+    openstack:   Updating   : python-firewall-0.6.3-2.el7_7.2.noarch                    69/316
     openstack:  
-    openstack:   Updating   : python-2.7.5-86.el7.x86_64                                34/314
+    openstack:   Updating   : grubby-8.28-26.el7.x86_64                                 70/316
     openstack:  
-    openstack:   Updating   : libtdb-1.3.16-1.el7.x86_64                                35/314
+    openstack:   Updating   : 1:cups-libs-1.6.3-40.el7.x86_64                           71/316
     openstack:  
-    openstack:   Updating   : libtevent-0.9.37-1.el7.x86_64                             36/314
+    openstack:   Installing : 32:bind-export-libs-9.11.4-9.P2.el7.x86_64                72/316
     openstack:  
-    openstack:   Updating   : libtirpc-0.2.4-0.16.el7.x86_64                            37/314
+    openstack:   Updating   : nss-pem-1.0.3-7.el7.x86_64                                73/316
     openstack:  
-    openstack:   Updating   : e2fsprogs-libs-1.42.9-16.el7.x86_64                       38/314
+    openstack:   Updating   : nss-sysinit-3.44.0-4.el7.x86_64                           74/316
     openstack:  
-    openstack:   Updating   : nss-softokn-3.44.0-5.el7.x86_64                           39/314
+    openstack:   Updating   : nss-3.44.0-4.el7.x86_64                                   75/316
     openstack:  
-    openstack:   Updating   : nss-pem-1.0.3-7.el7.x86_64                                40/314
+    openstack:   Updating   : binutils-2.27-41.base.el7_7.1.x86_64                      76/316
     openstack:  
-    openstack:   Updating   : nss-3.44.0-4.el7.x86_64                                   41/314
+    openstack:   Updating   : libssh2-1.8.0-3.el7.x86_64                                77/316
     openstack:  
-    openstack:   Updating   : nss-sysinit-3.44.0-4.el7.x86_64                           42/314
+    openstack:   Updating   : libcurl-7.29.0-54.el7_7.1.x86_64                          78/316
     openstack:  
-    openstack:   Updating   : lz4-1.7.5-3.el7.x86_64                                    43/314
+    openstack:   Updating   : util-linux-2.23.2-61.el7_7.1.x86_64                       79/316
     openstack:  
-    openstack:   Updating   : iptables-1.4.21-33.el7.x86_64                             44/314
+    openstack:   Updating   : kpartx-0.4.9-127.el7.x86_64                               80/316
     openstack:  
-    openstack:   Updating   : iproute-4.11.0-25.el7.x86_64                              45/314
+    openstack:   Updating   : 7:device-mapper-1.02.158-2.el7_7.2.x86_64                 81/316
     openstack:  
-    openstack:   Updating   : hostname-3.13-3.el7_7.1.x86_64                            46/314
+    openstack:   Updating   : procps-ng-3.3.10-26.el7_7.1.x86_64                        82/316
     openstack:  
-    openstack:   Updating   : libldb-1.4.2-1.el7.x86_64                                 47/314
+    openstack:   Updating   : 7:device-mapper-libs-1.02.158-2.el7_7.2.x86_64            83/316
     openstack:  
-    openstack:   Installing : python2-six-1.12.0-1.el7.noarch                           48/314
+    openstack:   Updating   : cryptsetup-libs-2.0.3-5.el7.x86_64                        84/316
     openstack:  
-    openstack:   Updating   : python-perf-3.10.0-1062.4.1.el7.x86_64                    49/314
+    openstack:   Updating   : dracut-033-564.el7.x86_64                                 85/316
     openstack:  
-    openstack:   Updating   : python-linux-procfs-0.4.11-4.el7.noarch                   50/314
+    openstack:   Updating   : kmod-20-25.el7.x86_64                                     86/316
     openstack:  
-    openstack:   Updating   : python-firewall-0.6.3-2.el7_7.2.noarch                    51/314
+    openstack:   Updating   : systemd-libs-219-67.el7_7.2.x86_64                        87/316
     openstack:  
-    openstack:   Updating   : 1:cups-libs-1.6.3-40.el7.x86_64                           52/314
+    openstack:   Updating   : elfutils-libs-0.176-2.el7.x86_64                          88/316
     openstack:  
-    openstack:   Updating   : libicu-50.2-3.el7.x86_64                                  53/314
+    openstack:   Updating   : systemd-219-67.el7_7.2.x86_64                             89/316
     openstack:  
-    openstack:   Updating   : libdb-utils-5.3.21-25.el7.x86_64                          54/314
+    openstack:   Updating   : elfutils-default-yama-scope-0.176-2.el7.noarch            90/316
     openstack:  
-    openstack:   Updating   : grubby-8.28-26.el7.x86_64                                 55/314
+    openstack:   Updating   : 1:grub2-tools-minimal-2.02-0.80.el7.centos.x86_64         91/316
     openstack:  
-    openstack:   Installing : 32:bind-export-libs-9.11.4-9.P2.el7.x86_64                56/314
+    openstack:   Updating   : polkit-0.112-22.el7_7.1.x86_64                            92/316
     openstack:  
-    openstack:   Updating   : binutils-2.27-41.base.el7_7.1.x86_64                      57/314
+    openstack:   Updating   : initscripts-9.49.47-1.el7.x86_64                          93/316
     openstack:  
-    openstack:   Updating   : libssh2-1.8.0-3.el7.x86_64                                58/314
+    openstack:   Updating   : samba-common-4.9.1-10.el7_7.noarch                        94/316
     openstack:  
-    openstack:   Updating   : libcurl-7.29.0-54.el7.x86_64                              59/314
+    openstack:   Updating   : systemd-sysv-219-67.el7_7.2.x86_64                        95/316
     openstack:  
-    openstack:   Installing : geoipupdate-2.5.0-1.el7.x86_64                            60/314
+    openstack:   Updating   : rpcbind-0.2.0-48.el7.x86_64                               96/316
     openstack:  
-    openstack:   Updating   : GeoIP-1.5.0-14.el7.x86_64                                 61/314
+    openstack:   Updating   : 12:dhcp-libs-4.2.5-77.el7.centos.x86_64                   97/316
     openstack:  
-    openstack:   Updating   : curl-7.29.0-54.el7.x86_64                                 62/314
+    openstack:   Updating   : 1:NetworkManager-libnm-1.18.0-5.el7_7.1.x86_64            98/316
     openstack:  
-    openstack:   Updating   : rpm-4.11.3-40.el7.x86_64                                  63/314
+    openstack:   Updating   : 1:NetworkManager-1.18.0-5.el7_7.1.x86_64                  99/316
     openstack:  
-    openstack:   Updating   : rpm-libs-4.11.3-40.el7.x86_64                             64/314
+    openstack:   Updating   : openssh-7.4p1-21.el7.x86_64                              100/316
     openstack:  
-    openstack:   Updating   : rpm-build-libs-4.11.3-40.el7.x86_64                       65/314
+    openstack:   Updating   : 12:dhcp-common-4.2.5-77.el7.centos.x86_64                101/316
     openstack:  
-    openstack:   Updating   : rpm-python-4.11.3-40.el7.x86_64                           66/314
+    openstack:   Updating   : 1:quota-4.01-19.el7.x86_64                               102/316
     openstack:  
-    openstack:   Updating   : yum-plugin-fastestmirror-1.1.31-52.el7.noarch             67/314
+    openstack:   Updating   : samba-common-libs-4.9.1-10.el7_7.x86_64                  103/316
     openstack:  
-    openstack:   Updating   : yum-3.4.3-163.el7.centos.noarch                           68/314
+    openstack:   Updating   : libwbclient-4.9.1-10.el7_7.x86_64                        104/316
     openstack:  
-    openstack:   Updating   : libss-1.42.9-16.el7.x86_64                                69/314
+    openstack:   Updating   : samba-client-libs-4.9.1-10.el7_7.x86_64                  105/316
     openstack:  
-    openstack:   Installing : 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64            70/314
+    openstack:   Updating   : hwdata-0.252-9.3.el7.x86_64                              106/316
     openstack:  
-    openstack:   Updating   : 1:make-3.82-24.el7.x86_64                                 71/314
+    openstack:   Updating   : libdrm-2.4.97-2.el7.x86_64                               107/316
     openstack:  
-    openstack:   Updating   : libmspack-0.5-0.7.alpha.el7.x86_64                        72/314
+    openstack:   Updating   : cronie-anacron-1.4.11-23.el7.x86_64                      108/316
     openstack:  
-    openstack:   Updating   : freetype-2.8-14.el7.x86_64                                73/314
+    openstack:   Updating   : cronie-1.4.11-23.el7.x86_64                              109/316
     openstack:  
-    openstack:   Updating   : sg3_utils-libs-1.37-18.el7_7.1.x86_64                     74/314
+    openstack:   Updating   : gssproxy-0.7.0-26.el7.x86_64                             110/316
     openstack:  
-    openstack:   Updating   : libteam-1.27-9.el7.x86_64                                 75/314
+    openstack:   Installing : python2-pyudev-0.18.1-6.el7.noarch                       111/316
     openstack:  
-    openstack:   Updating   : teamd-1.27-9.el7.x86_64                                   76/314
+    openstack:   Installing : geoipupdate-2.5.0-1.el7.x86_64                           112/316
     openstack:  
-    openstack:   Updating   : kernel-tools-libs-3.10.0-1062.4.1.el7.x86_64              77/314
+    openstack:   Updating   : GeoIP-1.5.0-14.el7.x86_64                                113/316
     openstack:  
-    openstack:   Updating   : 2:vim-minimal-7.4.629-6.el7.x86_64                        78/314
+    openstack:   Updating   : curl-7.29.0-54.el7_7.1.x86_64                            114/316
     openstack:  
-    openstack:   Updating   : numactl-libs-2.0.12-3.el7.x86_64                          79/314
+    openstack:   Updating   : rpm-4.11.3-40.el7.x86_64                                 115/316
     openstack:  
-    openstack:   Updating   : ipset-libs-7.1-1.el7.x86_64                               80/314
+    openstack:   Updating   : rpm-libs-4.11.3-40.el7.x86_64                            116/316
     openstack:  
-    openstack:   Updating   : ipset-7.1-1.el7.x86_64                                    81/314
+    openstack:   Updating   : 1:grub2-tools-2.02-0.80.el7.centos.x86_64                117/316
     openstack:  
-    openstack:   Updating   : libsmartcols-2.23.2-61.el7.x86_64                         82/314
+    openstack:   Updating   : policycoreutils-2.5-33.el7.x86_64                        118/316
     openstack:  
-    openstack:   Updating   : kmod-libs-20-25.el7.x86_64                                83/314
+    openstack:   Updating   : selinux-policy-3.13.1-252.el7_7.6.noarch                 119/316
     openstack:  
-    openstack:   Updating   : util-linux-2.23.2-61.el7.x86_64                           84/314
+    openstack:   Updating   : 1:grub2-tools-extra-2.02-0.80.el7.centos.x86_64          120/316
     openstack:  
-    openstack:   Updating   : kpartx-0.4.9-127.el7.x86_64                               85/314
+    openstack:   Updating   : 1:grub2-pc-2.02-0.80.el7.centos.x86_64                   121/316
     openstack:  
-    openstack:   Updating   : 7:device-mapper-1.02.158-2.el7_7.2.x86_64                 86/314
+    openstack:   Updating   : rpm-build-libs-4.11.3-40.el7.x86_64                      122/316
     openstack:  
-    openstack:   Updating   : procps-ng-3.3.10-26.el7_7.1.x86_64                        87/314
+    openstack:   Updating   : rpm-python-4.11.3-40.el7.x86_64                          123/316
     openstack:  
-    openstack:   Updating   : 7:device-mapper-libs-1.02.158-2.el7_7.2.x86_64            88/314
+    openstack:   Updating   : yum-plugin-fastestmirror-1.1.31-52.el7.noarch            124/316
     openstack:  
-    openstack:   Updating   : cryptsetup-libs-2.0.3-5.el7.x86_64                        89/314
+    openstack:   Updating   : yum-3.4.3-163.el7.centos.noarch                          125/316
     openstack:  
-    openstack:   Updating   : dracut-033-564.el7.x86_64                                 90/314
+    openstack:   Updating   : linux-firmware-20190429-72.gitddde598.el7.noarch         126/316
     openstack:  
-    openstack:   Updating   : kmod-20-25.el7.x86_64                                     91/314
+    openstack:   Installing : kernel-3.10.0-1062.9.1.el7.x86_64                        127/316
     openstack:  
-    openstack:   Updating   : systemd-libs-219-67.el7_7.2.x86_64                        92/314
+    openstack:   Updating   : yum-utils-1.1.31-52.el7.noarch                           128/316
     openstack:  
-    openstack:   Updating   : elfutils-libs-0.176-2.el7.x86_64                          93/314
+    openstack:   Updating   : 1:grub2-2.02-0.80.el7.centos.x86_64                      129/316
     openstack:  
-    openstack:   Updating   : systemd-219-67.el7_7.2.x86_64                             94/314
+    openstack:   Updating   : selinux-policy-targeted-3.13.1-252.el7_7.6.noarch        130/316
     openstack:  
-    openstack:   Updating   : elfutils-default-yama-scope-0.176-2.el7.noarch            95/314
+    openstack:   Updating   : 32:bind-libs-lite-9.11.4-9.P2.el7.x86_64                 131/316
     openstack:  
-    openstack:   Updating   : 1:grub2-tools-minimal-2.02-0.80.el7.centos.x86_64         96/314
+    openstack:   Updating   : tuned-2.11.0-5.el7_7.1.noarch                            132/316
     openstack:  
-    openstack:   Updating   : 1:grub2-tools-2.02-0.80.el7.centos.x86_64                 97/314
+    openstack:   Updating   : 1:nfs-utils-1.3.0-0.65.el7.x86_64                        133/316
     openstack:  
-    openstack:   Updating   : samba-common-4.9.1-6.el7.noarch                           98/314
+    openstack:   Updating   : open-vm-tools-10.3.0-2.el7.x86_64                        134/316
     openstack:  
-    openstack:   Updating   : libwbclient-4.9.1-6.el7.x86_64                            99/314
+    openstack:   Updating   : lshw-B.02.18-13.el7.x86_64                               135/316
     openstack:  
-    openstack:   Updating   : samba-client-libs-4.9.1-6.el7.x86_64                     100/314
+    openstack:   Updating   : 12:dhclient-4.2.5-77.el7.centos.x86_64                   136/316
     openstack:  
-    openstack:   Updating   : samba-common-libs-4.9.1-6.el7.x86_64                     101/314
+    openstack:   Updating   : openssh-server-7.4p1-21.el7.x86_64                       137/316
     openstack:  
-    openstack:   Updating   : polkit-0.112-22.el7_7.1.x86_64                           102/314
+    openstack:   Updating   : openssh-clients-7.4p1-21.el7.x86_64                      138/316
     openstack:  
-    openstack:   Updating   : initscripts-9.49.47-1.el7.x86_64                         103/314
+    openstack:   Updating   : 1:NetworkManager-tui-1.18.0-5.el7_7.1.x86_64             139/316
     openstack:  
-    openstack:   Updating   : systemd-sysv-219-67.el7_7.2.x86_64                       104/314
+    openstack:   Updating   : 1:NetworkManager-team-1.18.0-5.el7_7.1.x86_64            140/316
     openstack:  
-    openstack:   Updating   : rpcbind-0.2.0-48.el7.x86_64                              105/314
+    openstack:   Updating   : audit-2.8.5-4.el7.x86_64                                 141/316
     openstack:  
-    openstack:   Updating   : 12:dhcp-libs-4.2.5-77.el7.centos.x86_64                  106/314
+    openstack:   Updating   : biosdevname-0.7.3-2.el7.x86_64                           142/316
     openstack:  
-    openstack:   Updating   : 1:NetworkManager-libnm-1.18.0-5.el7_7.1.x86_64           107/314
+    openstack:   Updating   : 10:qemu-guest-agent-2.12.0-3.el7.x86_64                  143/316
     openstack:  
-    openstack:   Updating   : policycoreutils-2.5-33.el7.x86_64                        108/314
+    openstack:   Updating   : rsyslog-8.24.0-41.el7_7.2.x86_64                         144/316
     openstack:  
-    openstack:   Updating   : openssh-7.4p1-21.el7.x86_64                              109/314
+    openstack:   Updating   : chrony-3.4-1.el7.x86_64                                  145/316
     openstack:  
-    openstack:   Updating   : selinux-policy-3.13.1-252.el7.1.noarch                   110/314
+    openstack:   Updating   : firewalld-0.6.3-2.el7_7.2.noarch                         146/316
     openstack:  
-    openstack:   Updating   : 12:dhcp-common-4.2.5-77.el7.centos.x86_64                111/314
+    openstack:   Updating   : 3:irqbalance-1.0.7-12.el7.x86_64                         147/316
     openstack:  
-    openstack:   Updating   : 1:quota-4.01-19.el7.x86_64                               112/314
+    openstack:   Updating   : parted-3.1-31.el7.x86_64                                 148/316
     openstack:  
-    openstack:   Updating   : 1:grub2-tools-extra-2.02-0.80.el7.centos.x86_64          113/314
+    openstack:   Updating   : nss-tools-3.44.0-4.el7.x86_64                            149/316
     openstack:  
-    openstack:   Updating   : 1:grub2-pc-2.02-0.80.el7.centos.x86_64                   114/314
+    openstack:   Installing : python2-chardet-3.0.4-7.el7.noarch                       150/316
     openstack:  
-    openstack:   Updating   : hwdata-0.252-9.3.el7.x86_64                              115/314
+    openstack:   Updating   : passwd-0.79-5.el7.x86_64                                 151/316
     openstack:  
-    openstack:   Updating   : libdrm-2.4.97-2.el7.x86_64                               116/314
+    openstack:   Updating   : xfsprogs-4.5.0-20.el7.x86_64                             152/316
     openstack:  
-    openstack:   Updating   : cronie-anacron-1.4.11-23.el7.x86_64                      117/314
+    openstack:   Updating   : e2fsprogs-1.42.9-16.el7.x86_64                           153/316
     openstack:  
-    openstack:   Updating   : cronie-1.4.11-23.el7.x86_64                              118/314
+    openstack:   Updating   : 1:openssl-1.0.2k-19.el7.x86_64                           154/316
     openstack:  
-    openstack:   Updating   : gssproxy-0.7.0-26.el7.x86_64                             119/314
+    openstack:   Updating   : 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64             155/316
     openstack:  
-    openstack:   Installing : python2-pyudev-0.18.1-6.el7.noarch                       120/314
+    openstack:   Updating   : kernel-tools-3.10.0-1062.9.1.el7.x86_64                  156/316
     openstack:  
-    openstack:   Updating   : 2:ethtool-4.8-10.el7.x86_64                              121/314
+    openstack:   Updating   : sudo-1.8.23-4.el7_7.1.x86_64                             157/316
     openstack:  
-    openstack:   Updating   : libndp-1.2-9.el7.x86_64                                  122/314
+    openstack:   Updating   : sg3_utils-1.37-18.el7_7.1.x86_64                         158/316
     openstack:  
-    openstack:   Updating   : 1:NetworkManager-1.18.0-5.el7_7.1.x86_64                 123/314
+    openstack:   Updating   : libgomp-4.8.5-39.el7.x86_64                              159/316
     openstack:  
-    openstack:   Updating   : libseccomp-2.4.1-0.el7.x86_64                            124/314
+    openstack:   Updating   : 1:dmidecode-3.2-3.el7.x86_64                             160/316
     openstack:  
-    openstack:   Updating   : linux-firmware-20190429-72.gitddde598.el7.noarch         125/314
+    openstack:   Updating   : iprutils-2.4.17.1-2.el7.x86_64                           161/316
     openstack:  
-    openstack:   Installing : kernel-3.10.0-1062.4.1.el7.x86_64                        126/314
+    openstack:   Cleanup    : 12:dhclient-4.2.5-68.el7.centos.1.x86_64                 162/316
     openstack:  
-    openstack:   Updating   : chrony-3.4-1.el7.x86_64                                  127/314
+    openstack:   Cleanup    : tuned-2.10.0-6.el7_6.3.noarch                            163/316
     openstack:  
-    openstack:   Updating   : 1:NetworkManager-tui-1.18.0-5.el7_7.1.x86_64             128/314
+    openstack:   Cleanup    : 1:nfs-utils-1.3.0-0.61.el7.x86_64                        164/316
     openstack:  
-    openstack:   Updating   : 1:NetworkManager-team-1.18.0-5.el7_7.1.x86_64            129/314
+    openstack:   Cleanup    : open-vm-tools-10.2.5-3.el7.x86_64                        165/316
     openstack:  
-    openstack:   Updating   : tuned-2.11.0-5.el7_7.1.noarch                            130/314
+    openstack:   Cleanup    : initscripts-9.49.46-1.el7.x86_64                         166/316
     openstack:  
-    openstack:   Updating   : 1:nfs-utils-1.3.0-0.65.el7.x86_64                        131/314
+    openstack:   Cleanup    : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64              167/316
     openstack:  
-    openstack:   Updating   : open-vm-tools-10.3.0-2.el7.x86_64                        132/314
+    openstack:   Cleanup    : openssh-server-7.4p1-16.el7.x86_64                       168/316
     openstack:  
-    openstack:   Updating   : lshw-B.02.18-13.el7.x86_64                               133/314
+    openstack:   Cleanup    : libwbclient-4.8.3-4.el7.x86_64                           169/316
     openstack:  
-    openstack:   Updating   : 1:grub2-2.02-0.80.el7.centos.x86_64                      134/314
+    openstack:   Cleanup    : samba-client-libs-4.8.3-4.el7.x86_64                     170/316
     openstack:  
-    openstack:   Updating   : 12:dhclient-4.2.5-77.el7.centos.x86_64                   135/314
+    openstack:   Cleanup    : samba-common-libs-4.8.3-4.el7.x86_64                     171/316
     openstack:  
-    openstack:   Updating   : selinux-policy-targeted-3.13.1-252.el7.1.noarch          136/314
+    openstack:   Cleanup    : 1:cups-libs-1.6.3-35.el7.x86_64                          172/316
     openstack:  
-    openstack:   Updating   : openssh-server-7.4p1-21.el7.x86_64                       137/314
+    openstack:   Cleanup    : 1:openssl-1.0.2k-16.el7_6.1.x86_64                       173/316
     openstack:  
-    openstack:   Updating   : openssh-clients-7.4p1-21.el7.x86_64                      138/314
+    openstack:   Cleanup    : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                  174/316
     openstack:  
-    openstack:   Updating   : audit-2.8.5-4.el7.x86_64                                 139/314
+    openstack:   Cleanup    : nss-tools-3.36.0-7.1.el7_6.x86_64                        175/316
     openstack:  
-    openstack:   Updating   : biosdevname-0.7.3-2.el7.x86_64                           140/314
+    openstack:   Cleanup    : openssh-clients-7.4p1-16.el7.x86_64                      176/316
     openstack:  
-    openstack:   Updating   : 10:qemu-guest-agent-2.12.0-3.el7.x86_64                  141/314
+    openstack:   Cleanup    : audit-2.8.4-4.el7.x86_64                                 177/316
     openstack:  
-    openstack:   Updating   : rsyslog-8.24.0-41.el7_7.2.x86_64                         142/314
+    openstack:   Cleanup    : parted-3.1-29.el7.x86_64                                 178/316
     openstack:  
-    openstack:   Updating   : firewalld-0.6.3-2.el7_7.2.noarch                         143/314
+    openstack:   Cleanup    : chrony-3.2-2.el7.x86_64                                  179/316
     openstack:  
-    openstack:   Updating   : 3:irqbalance-1.0.7-12.el7.x86_64                         144/314
+    openstack:   Cleanup    : 1:quota-4.01-17.el7.x86_64                               180/316
     openstack:  
-    openstack:   Updating   : parted-3.1-31.el7.x86_64                                 145/314
+    openstack:   Cleanup    : rpcbind-0.2.0-47.el7.x86_64                              181/316
     openstack:  
-    openstack:   Updating   : sudo-1.8.23-4.el7_7.1.x86_64                             146/314
+    openstack:   Cleanup    : e2fsprogs-1.42.9-13.el7.x86_64                           182/316
     openstack:  
-    openstack:   Updating   : kernel-tools-3.10.0-1062.4.1.el7.x86_64                  147/314
+    openstack:   Cleanup    : xfsprogs-4.5.0-19.el7_6.x86_64                           183/316
     openstack:  
-    openstack:   Updating   : sg3_utils-1.37-18.el7_7.1.x86_64                         148/314
+    openstack:   Cleanup    : rsyslog-8.24.0-34.el7.x86_64                             184/316
     openstack:  
-    openstack:   Updating   : 1:openssl-1.0.2k-19.el7.x86_64                           149/314
+    openstack:   Cleanup    : 10:qemu-guest-agent-2.12.0-2.el7.x86_64                  185/316
     openstack:  
-    openstack:   Updating   : 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64             150/314
+    openstack:   Cleanup    : firewalld-0.5.3-5.el7.noarch                             186/316
     openstack:  
-    openstack:   Updating   : e2fsprogs-1.42.9-16.el7.x86_64                           151/314
+    openstack:   Cleanup    : gssproxy-0.7.0-21.el7.x86_64                             187/316
     openstack:  
-    openstack:   Updating   : yum-utils-1.1.31-52.el7.noarch                           152/314
+    openstack:   Cleanup    : sg3_utils-1.37-17.el7.x86_64                             188/316
     openstack:  
-    openstack:   Updating   : 32:bind-libs-lite-9.11.4-9.P2.el7.x86_64                 153/314
+    openstack:   Cleanup    : 3:irqbalance-1.0.7-11.el7.x86_64                         189/316
     openstack:  
-    openstack:   Updating   : nss-tools-3.44.0-4.el7.x86_64                            154/314
+    openstack:   Cleanup    : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64             190/316
     openstack:  
-    openstack:   Installing : python2-chardet-3.0.4-7.el7.noarch                       155/314
+    openstack:   Cleanup    : 1:NetworkManager-1.12.0-10.el7_6.x86_64                  191/316
     openstack:  
-    openstack:   Updating   : xfsprogs-4.5.0-20.el7.x86_64                             156/314
+    openstack:   Cleanup    : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64            192/316
     openstack:  
-    openstack:   Updating   : passwd-0.79-5.el7.x86_64                                 157/314
+    openstack:   Cleanup    : polkit-0.112-18.el7_6.1.x86_64                           193/316
     openstack:  
-    openstack:   Updating   : libgomp-4.8.5-39.el7.x86_64                              158/314
+    openstack:   Cleanup    : openssh-7.4p1-16.el7.x86_64                              194/316
     openstack:  
-    openstack:   Updating   : 1:dmidecode-3.2-3.el7.x86_64                             159/314
+    openstack:   Cleanup    : iproute-4.11.0-14.el7_6.2.x86_64                         195/316
     openstack:  
-    openstack:   Updating   : iprutils-2.4.17.1-2.el7.x86_64                           160/314
+    openstack:   Cleanup    : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                     196/316
     openstack:  
-    openstack:   Cleanup    : 12:dhclient-4.2.5-68.el7.centos.1.x86_64                 161/314
+    openstack:   Cleanup    : ipset-6.38-3.el7_6.x86_64                                197/316
     openstack:  
-    openstack:   Cleanup    : tuned-2.10.0-6.el7_6.3.noarch                            162/314
+    openstack:   Cleanup    : libldb-1.3.4-1.el7.x86_64                                198/316
     openstack:  
-    openstack:   Cleanup    : 1:nfs-utils-1.3.0-0.61.el7.x86_64                        163/314
+    openstack:   Cleanup    : libicu-50.1.2-17.el7.x86_64                              199/316
     openstack:  
-    openstack:   Cleanup    : samba-common-libs-4.8.3-4.el7.x86_64                     164/314
+    openstack:   Cleanup    : cronie-1.4.11-20.el7_6.x86_64                            200/316
     openstack:  
-    openstack:   Cleanup    : libwbclient-4.8.3-4.el7.x86_64                           165/314
+    openstack:   Cleanup    : cronie-anacron-1.4.11-20.el7_6.x86_64                    201/316
     openstack:  
-    openstack:   Cleanup    : samba-client-libs-4.8.3-4.el7.x86_64                     166/314
+    openstack:   Cleanup    : kernel-tools-3.10.0-957.12.2.el7.x86_64                  202/316
     openstack:  
-    openstack:   Cleanup    : open-vm-tools-10.2.5-3.el7.x86_64                        167/314
+    openstack:   Cleanup    : lshw-B.02.18-12.el7.x86_64                               203/316
     openstack:  
-    openstack:   Cleanup    : initscripts-9.49.46-1.el7.x86_64                         168/314
+    openstack:   Cleanup    : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch       204/316
     openstack:  
-    openstack:   Cleanup    : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64              169/314
+    openstack:   Cleanup    : teamd-1.27-5.el7.x86_64                                  205/316
     openstack:  
-    openstack:   Cleanup    : openssh-server-7.4p1-16.el7.x86_64                       170/314
+    openstack:   Cleanup    : libtirpc-0.2.4-0.15.el7.x86_64                           206/316
     openstack:  
-    openstack:   Cleanup    : 1:cups-libs-1.6.3-35.el7.x86_64                          171/314
+    openstack:   Cleanup    : python-perf-3.10.0-957.12.2.el7.x86_64                   207/316
     openstack:  
-    openstack:   Cleanup    : 1:openssl-1.0.2k-16.el7_6.1.x86_64                       172/314
+    openstack:   Cleanup    : sudo-1.8.23-3.el7.x86_64                                 208/316
     openstack:  
-    openstack:   Cleanup    : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                  173/314
+    openstack:   Cleanup    : passwd-0.79-4.el7.x86_64                                 209/316
     openstack:  
-    openstack:   Cleanup    : nss-tools-3.36.0-7.1.el7_6.x86_64                        174/314
+    openstack:   Cleanup    : glib2-2.56.1-2.el7.x86_64                                210/316
     openstack:  
-    openstack:   Cleanup    : openssh-clients-7.4p1-16.el7.x86_64                      175/314
+    openstack:   Cleanup    : grubby-8.28-25.el7.x86_64                                211/316
     openstack:  
-    openstack:   Cleanup    : audit-2.8.4-4.el7.x86_64                                 176/314
+    openstack:   Cleanup    : selinux-policy-3.13.1-229.el7_6.12.noarch                212/316
     openstack:  
-    openstack:   Cleanup    : parted-3.1-29.el7.x86_64                                 177/314
+    openstack:   Cleanup    : hwdata-0.252-9.1.el7.x86_64                              213/316
     openstack:  
-    openstack:   Cleanup    : chrony-3.2-2.el7.x86_64                                  178/314
+    openstack:   Cleanup    : systemd-sysv-219-62.el7_6.6.x86_64                       214/316
     openstack:  
-    openstack:   Cleanup    : 1:quota-4.01-17.el7.x86_64                               179/314
+    openstack:   Cleanup    : samba-common-4.8.3-4.el7.noarch                          215/316
     openstack:  
-    openstack:   Cleanup    : rpcbind-0.2.0-47.el7.x86_64                              180/314
+    openstack:   Erasing    : python-pyudev-0.15-9.el7.noarch                          216/316
     openstack:  
-    openstack:   Cleanup    : e2fsprogs-1.42.9-13.el7.x86_64                           181/314
+    openstack:   Cleanup    : yum-utils-1.1.31-50.el7.noarch                           217/316
     openstack:  
-    openstack:   Cleanup    : xfsprogs-4.5.0-19.el7_6.x86_64                           182/314
+    openstack:   Cleanup    : yum-plugin-fastestmirror-1.1.31-50.el7.noarch            218/316
     openstack:  
-    openstack:   Cleanup    : rsyslog-8.24.0-34.el7.x86_64                             183/314
+    openstack:   Cleanup    : yum-3.4.3-161.el7.centos.noarch                          219/316
     openstack:  
-    openstack:   Cleanup    : 10:qemu-guest-agent-2.12.0-2.el7.x86_64                  184/314
+    openstack:   Cleanup    : 1:grub2-2.02-0.76.el7.centos.1.x86_64                    220/316
     openstack:  
-    openstack:   Cleanup    : firewalld-0.5.3-5.el7.noarch                             185/314
+    openstack:   Cleanup    : rpm-python-4.11.3-35.el7.x86_64                          221/316
     openstack:  
-    openstack:   Cleanup    : gssproxy-0.7.0-21.el7.x86_64                             186/314
+    openstack:   Cleanup    : rpm-build-libs-4.11.3-35.el7.x86_64                      222/316
     openstack:  
-    openstack:   Cleanup    : 3:irqbalance-1.0.7-11.el7.x86_64                         187/314
+    openstack:   Cleanup    : policycoreutils-2.5-29.el7_6.1.x86_64                    223/316
     openstack:  
-    openstack:   Cleanup    : sg3_utils-1.37-17.el7.x86_64                             188/314
+    openstack:   Cleanup    : 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64                 224/316
     openstack:  
-    openstack:   Cleanup    : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64             189/314
+    openstack:   Cleanup    : 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64        225/316
     openstack:  
-    openstack:   Cleanup    : 1:NetworkManager-1.12.0-10.el7_6.x86_64                  190/314
+    openstack:   Cleanup    : 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64              226/316
     openstack:  
-    openstack:   Cleanup    : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64            191/314
+    openstack:   Cleanup    : rpm-libs-4.11.3-35.el7.x86_64                            227/316
     openstack:  
-    openstack:   Cleanup    : polkit-0.112-18.el7_6.1.x86_64                           192/314
+    openstack:   Cleanup    : rpm-4.11.3-35.el7.x86_64                                 228/316
     openstack:  
-    openstack:   Cleanup    : openssh-7.4p1-16.el7.x86_64                              193/314
+    openstack:   Cleanup    : curl-7.29.0-51.el7.x86_64                                229/316
     openstack:  
-    openstack:   Cleanup    : iproute-4.11.0-14.el7_6.2.x86_64                         194/314
+    openstack:   Cleanup    : 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64      230/316
     openstack:  
-    openstack:   Cleanup    : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                     195/314
+    openstack:   Cleanup    : libdb-utils-5.3.21-24.el7.x86_64                         231/316
     openstack:  
-    openstack:   Cleanup    : ipset-6.38-3.el7_6.x86_64                                196/314
+    openstack:   Cleanup    : libstdc++-4.8.5-36.el7_6.2.x86_64                        232/316
     openstack:  
-    openstack:   Cleanup    : libicu-50.1.2-17.el7.x86_64                              197/314
+    openstack:   Cleanup    : libtevent-0.9.36-1.el7.x86_64                            233/316
     openstack:  
-    openstack:   Cleanup    : libldb-1.3.4-1.el7.x86_64                                198/314
+    openstack:   Cleanup    : numactl-libs-2.0.9-7.el7.x86_64                          234/316
     openstack:  
-    openstack:   Cleanup    : cronie-1.4.11-20.el7_6.x86_64                            199/314
+    openstack:   Cleanup    : e2fsprogs-libs-1.42.9-13.el7.x86_64                      235/316
     openstack:  
-    openstack:   Cleanup    : cronie-anacron-1.4.11-20.el7_6.x86_64                    200/314
+    openstack:   Cleanup    : libss-1.42.9-13.el7.x86_64                               236/316
     openstack:  
-    openstack:   Cleanup    : kernel-tools-3.10.0-957.12.2.el7.x86_64                  201/314
+    openstack:   Cleanup    : freetype-2.8-12.el7_6.1.x86_64                           237/316
     openstack:  
-    openstack:   Cleanup    : lshw-B.02.18-12.el7.x86_64                               202/314
+    openstack:   Cleanup    : iptables-1.4.21-28.el7.x86_64                            238/316
     openstack:  
-    openstack:   Cleanup    : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch       203/314
+    openstack:   Cleanup    : 1:make-3.82-23.el7.x86_64                                239/316
     openstack:  
-    openstack:   Cleanup    : teamd-1.27-5.el7.x86_64                                  204/314
+    openstack:   Cleanup    : libdrm-2.4.91-3.el7.x86_64                               240/316
     openstack:  
-    openstack:   Cleanup    : libtirpc-0.2.4-0.15.el7.x86_64                           205/314
+    openstack:   Cleanup    : iprutils-2.4.16.1-1.el7.x86_64                           241/316
     openstack:  
-    openstack:   Cleanup    : python-perf-3.10.0-957.12.2.el7.x86_64                   206/314
+    openstack:   Cleanup    : libgomp-4.8.5-36.el7_6.2.x86_64                          242/316
     openstack:  
-    openstack:   Cleanup    : sudo-1.8.23-3.el7.x86_64                                 207/314
+    openstack:   Cleanup    : biosdevname-0.7.3-1.el7.x86_64                           243/316
     openstack:  
-    openstack:   Cleanup    : passwd-0.79-4.el7.x86_64                                 208/314
+    openstack:   Cleanup    : 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch         244/316
     openstack:  
-    openstack:   Cleanup    : glib2-2.56.1-2.el7.x86_64                                209/314
+    openstack:   Cleanup    : python-firewall-0.5.3-5.el7.noarch                       245/316
     openstack:  
-    openstack:   Cleanup    : grubby-8.28-25.el7.x86_64                                210/314
+    openstack:   Cleanup    : python-linux-procfs-0.4.9-4.el7.noarch                   246/316
     openstack:  
-    openstack:   Cleanup    : selinux-policy-3.13.1-229.el7_6.12.noarch                211/314
+    openstack:   Cleanup    : 12:dhcp-common-4.2.5-68.el7.centos.1.x86_64              247/316
     openstack:  
-    openstack:   Cleanup    : hwdata-0.252-9.1.el7.x86_64                              212/314
+    openstack:   Cleanup    : 12:dhcp-libs-4.2.5-68.el7.centos.1.x86_64                248/316
     openstack:  
-    openstack:   Cleanup    : systemd-sysv-219-62.el7_6.6.x86_64                       213/314
+    openstack:   Cleanup    : linux-firmware-20180911-69.git85c5d90.el7.noarch         249/316
     openstack:  
-    openstack:   Cleanup    : samba-common-4.8.3-4.el7.noarch                          214/314
+    openstack:   Erasing    : python-chardet-2.2.1-1.el7_1.noarch                      250/316
     openstack:  
-    openstack:   Erasing    : python-pyudev-0.15-9.el7.noarch                          215/314
+    openstack:   Cleanup    : util-linux-2.23.2-59.el7_6.1.x86_64                      251/316
     openstack:  
-    openstack:   Cleanup    : yum-utils-1.1.31-50.el7.noarch                           216/314
+    openstack:   Cleanup    : procps-ng-3.3.10-23.el7.x86_64                           252/316
     openstack:  
-    openstack:   Cleanup    : yum-plugin-fastestmirror-1.1.31-50.el7.noarch            217/314
+    openstack:   Cleanup    : kpartx-0.4.9-123.el7.x86_64                              253/316
     openstack:  
-    openstack:   Cleanup    : yum-3.4.3-161.el7.centos.noarch                          218/314
+    openstack:   Cleanup    : cryptsetup-libs-2.0.3-3.el7.x86_64                       254/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-2.02-0.76.el7.centos.1.x86_64                    219/314
+    openstack:   Cleanup    : systemd-libs-219-62.el7_6.6.x86_64                       255/316
     openstack:  
-    openstack:   Cleanup    : rpm-python-4.11.3-35.el7.x86_64                          220/314
+    openstack:   Cleanup    : kmod-20-23.el7.x86_64                                    256/316
     openstack:  
-    openstack:   Cleanup    : rpm-build-libs-4.11.3-35.el7.x86_64                      221/314
+    openstack:   Cleanup    : dracut-033-554.el7.x86_64                                257/316
     openstack:  
-    openstack:   Cleanup    : policycoreutils-2.5-29.el7_6.1.x86_64                    222/314
+    openstack:   Cleanup    : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64          258/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64                 223/314
+    openstack:   Cleanup    : 7:device-mapper-1.02.149-10.el7_6.7.x86_64               259/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64        224/314
+    openstack:   Cleanup    : elfutils-libs-0.172-2.el7.x86_64                         260/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64              225/314
+    openstack:   Cleanup    : elfutils-default-yama-scope-0.172-2.el7.noarch           261/316
     openstack:  
-    openstack:   Cleanup    : rpm-libs-4.11.3-35.el7.x86_64                            226/314
+    openstack:   Cleanup    : systemd-219-62.el7_6.6.x86_64                            262/316
     openstack:  
-    openstack:   Cleanup    : rpm-4.11.3-35.el7.x86_64                                 227/314
+    openstack:   Cleanup    : libcurl-7.29.0-51.el7.x86_64                             263/316
     openstack:  
-    openstack:   Cleanup    : curl-7.29.0-51.el7.x86_64                                228/314
+    openstack:   Cleanup    : nss-sysinit-3.36.0-7.1.el7_6.x86_64                      264/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64      229/314
+    openstack:   Cleanup    : nss-3.36.0-7.1.el7_6.x86_64                              265/316
     openstack:  
-    openstack:   Cleanup    : libdb-utils-5.3.21-24.el7.x86_64                         230/314
+    openstack:   Cleanup    : nss-pem-1.0.3-5.el7_6.1.x86_64                           266/316
     openstack:  
-    openstack:   Cleanup    : libstdc++-4.8.5-36.el7_6.2.x86_64                        231/314
+    openstack:   Cleanup    : nss-softokn-3.36.0-5.el7_5.x86_64                        267/316
     openstack:  
-    openstack:   Cleanup    : libtevent-0.9.36-1.el7.x86_64                            232/314
+    openstack:   Cleanup    : libmount-2.23.2-59.el7_6.1.x86_64                        268/316
     openstack:  
-    openstack:   Cleanup    : numactl-libs-2.0.9-7.el7.x86_64                          233/314
+    openstack:   Cleanup    : libblkid-2.23.2-59.el7_6.1.x86_64                        269/316
     openstack:  
-    openstack:   Cleanup    : e2fsprogs-libs-1.42.9-13.el7.x86_64                      234/314
+    openstack:   Cleanup    : python-2.7.5-77.el7_6.x86_64                             270/316
     openstack:  
-    openstack:   Cleanup    : libss-1.42.9-13.el7.x86_64                               235/314
+    openstack:   Cleanup    : python-libs-2.7.5-77.el7_6.x86_64                        271/316
     openstack:  
-    openstack:   Cleanup    : freetype-2.8-12.el7_6.1.x86_64                           236/314
+    openstack:   Cleanup    : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                 272/316
     openstack:  
-    openstack:   Cleanup    : iptables-1.4.21-28.el7.x86_64                            237/314
+    openstack:   Cleanup    : libssh2-1.4.3-12.el7_6.2.x86_64                          273/316
     openstack:  
-    openstack:   Cleanup    : 1:make-3.82-23.el7.x86_64                                238/314
+    openstack:   Cleanup    : kmod-libs-20-23.el7.x86_64                               274/316
     openstack:  
-    openstack:   Cleanup    : libdrm-2.4.91-3.el7.x86_64                               239/314
+    openstack:   Cleanup    : binutils-2.27-34.base.el7.x86_64                         275/316
     openstack:  
-    openstack:   Cleanup    : iprutils-2.4.16.1-1.el7.x86_64                           240/314
+    openstack:   Cleanup    : centos-release-7-6.1810.2.el7.centos.x86_64              276/316
     openstack:  
-    openstack:   Cleanup    : libgomp-4.8.5-36.el7_6.2.x86_64                          241/314
+    openstack:   Cleanup    : krb5-libs-1.15.1-37.el7_6.x86_64                         277/316
     openstack:  
-    openstack:   Cleanup    : biosdevname-0.7.3-1.el7.x86_64                           242/314
+    openstack:   Cleanup    : coreutils-8.22-23.el7.x86_64                             278/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch         243/314
+    openstack:   Cleanup    : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                  279/316
     openstack:  
-    openstack:   Cleanup    : python-firewall-0.5.3-5.el7.noarch                       244/314
+    openstack:   Cleanup    : readline-6.2-10.el7.x86_64                               280/316
     openstack:  
-    openstack:   Cleanup    : python-linux-procfs-0.4.9-4.el7.noarch                   245/314
+    openstack:   Cleanup    : diffutils-3.3-4.el7.x86_64                               281/316
     openstack:  
-    openstack:   Cleanup    : 12:dhcp-common-4.2.5-68.el7.centos.1.x86_64              246/314
+    openstack:   Cleanup    : ca-certificates-2018.2.22-70.0.el7_5.noarch              282/316
     openstack:  
-    openstack:   Cleanup    : 12:dhcp-libs-4.2.5-68.el7.centos.1.x86_64                247/314
+    openstack:   Cleanup    : libcom_err-1.42.9-13.el7.x86_64                          283/316
     openstack:  
-    openstack:   Cleanup    : linux-firmware-20180911-69.git85c5d90.el7.noarch         248/314
+    openstack:   Cleanup    : libcap-2.22-9.el7.x86_64                                 284/316
     openstack:  
-    openstack:   Erasing    : python-chardet-2.2.1-1.el7_1.noarch                      249/314
+    openstack:   Cleanup    : audit-libs-2.8.4-4.el7.x86_64                            285/316
     openstack:  
-    openstack:   Cleanup    : util-linux-2.23.2-59.el7_6.1.x86_64                      250/314
+    openstack:   Cleanup    : libdb-5.3.21-24.el7.x86_64                               286/316
     openstack:  
-    openstack:   Cleanup    : procps-ng-3.3.10-23.el7.x86_64                           251/314
+    openstack:   Cleanup    : libuuid-2.23.2-59.el7_6.1.x86_64                         287/316
     openstack:  
-    openstack:   Cleanup    : kpartx-0.4.9-123.el7.x86_64                              252/314
+    openstack:   Cleanup    : elfutils-libelf-0.172-2.el7.x86_64                       288/316
     openstack:  
-    openstack:   Cleanup    : cryptsetup-libs-2.0.3-3.el7.x86_64                       253/314
+    openstack:   Cleanup    : lz4-1.7.5-2.el7.x86_64                                   289/316
     openstack:  
-    openstack:   Cleanup    : systemd-libs-219-62.el7_6.6.x86_64                       254/314
+    openstack:   Cleanup    : libsmartcols-2.23.2-59.el7_6.1.x86_64                    290/316
     openstack:  
-    openstack:   Cleanup    : kmod-20-23.el7.x86_64                                    255/314
+    openstack:   Cleanup    : libtalloc-2.1.13-1.el7.x86_64                            291/316
     openstack:  
-    openstack:   Cleanup    : dracut-033-554.el7.x86_64                                256/314
+    openstack:   Cleanup    : 2:vim-minimal-7.4.160-5.el7.x86_64                       292/316
     openstack:  
-    openstack:   Cleanup    : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64          257/314
+    openstack:   Cleanup    : libteam-1.27-5.el7.x86_64                                293/316
     openstack:  
-    openstack:   Cleanup    : 7:device-mapper-1.02.149-10.el7_6.7.x86_64               258/314
+    openstack:   Cleanup    : kernel-tools-libs-3.10.0-957.12.2.el7.x86_64             294/316
     openstack:  
-    openstack:   Cleanup    : elfutils-libs-0.172-2.el7.x86_64                         259/314
+    openstack:   Cleanup    : libtdb-1.3.15-1.el7.x86_64                               295/316
     openstack:  
-    openstack:   Cleanup    : elfutils-default-yama-scope-0.172-2.el7.noarch           260/314
+    openstack:   Cleanup    : ipset-libs-6.38-3.el7_6.x86_64                           296/316
     openstack:  
-    openstack:   Cleanup    : systemd-219-62.el7_6.6.x86_64                            261/314
+    openstack:   Cleanup    : libndp-1.2-7.el7.x86_64                                  297/316
     openstack:  
-    openstack:   Cleanup    : libcurl-7.29.0-51.el7.x86_64                             262/314
+    openstack:   Cleanup    : sg3_utils-libs-1.37-17.el7.x86_64                        298/316
     openstack:  
-    openstack:   Cleanup    : nss-sysinit-3.36.0-7.1.el7_6.x86_64                      263/314
+    openstack:   Cleanup    : libseccomp-2.3.1-3.el7.x86_64                            299/316
     openstack:  
-    openstack:   Cleanup    : nss-3.36.0-7.1.el7_6.x86_64                              264/314
+    openstack:   Cleanup    : GeoIP-1.5.0-13.el7.x86_64                                300/316
     openstack:  
-    openstack:   Cleanup    : nss-pem-1.0.3-5.el7_6.1.x86_64                           265/314
+    openstack:   Cleanup    : hostname-3.13-3.el7.x86_64                               301/316
     openstack:  
-    openstack:   Cleanup    : nss-softokn-3.36.0-5.el7_5.x86_64                        266/314
+    openstack:   Cleanup    : libmspack-0.5-0.6.alpha.el7.x86_64                       302/316
     openstack:  
-    openstack:   Cleanup    : libmount-2.23.2-59.el7_6.1.x86_64                        267/314
+    openstack:   Cleanup    : 2:ethtool-4.8-9.el7.x86_64                               303/316
     openstack:  
-    openstack:   Cleanup    : libblkid-2.23.2-59.el7_6.1.x86_64                        268/314
+    openstack:   Cleanup    : 1:dmidecode-3.1-2.el7.x86_64                             304/316
     openstack:  
-    openstack:   Cleanup    : python-2.7.5-77.el7_6.x86_64                             269/314
+    openstack:   Cleanup    : 1:grub2-common-2.02-0.76.el7.centos.1.noarch             305/316
     openstack:  
-    openstack:   Cleanup    : python-libs-2.7.5-77.el7_6.x86_64                        270/314
+    openstack:   Cleanup    : firewalld-filesystem-0.5.3-5.el7.noarch                  306/316
     openstack:  
-    openstack:   Cleanup    : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                 271/314
+    openstack:   Cleanup    : 1:quota-nls-4.01-17.el7.noarch                           307/316
     openstack:  
-    openstack:   Cleanup    : libssh2-1.4.3-12.el7_6.2.x86_64                          272/314
+    openstack:   Cleanup    : 32:bind-license-9.9.4-73.el7_6.noarch                    308/316
     openstack:  
-    openstack:   Cleanup    : kmod-libs-20-23.el7.x86_64                               273/314
+    openstack:   Cleanup    : glibc-common-2.17-260.el7_6.5.x86_64                     309/316
     openstack:  
-    openstack:   Cleanup    : binutils-2.27-34.base.el7.x86_64                         274/314
+    openstack:   Cleanup    : bash-4.2.46-31.el7.x86_64                                310/316
     openstack:  
-    openstack:   Cleanup    : centos-release-7-6.1810.2.el7.centos.x86_64              275/314
+    openstack:   Cleanup    : nspr-4.19.0-1.el7_5.x86_64                               311/316
     openstack:  
-    openstack:   Cleanup    : krb5-libs-1.15.1-37.el7_6.x86_64                         276/314
+    openstack:   Cleanup    : nss-util-3.36.0-1.1.el7_6.x86_64                         312/316
     openstack:  
-    openstack:   Cleanup    : coreutils-8.22-23.el7.x86_64                             277/314
+    openstack:   Cleanup    : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                 313/316
     openstack:  
-    openstack:   Cleanup    : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                  278/314
+    openstack:   Cleanup    : glibc-2.17-260.el7_6.5.x86_64                            314/316
     openstack:  
-    openstack:   Cleanup    : readline-6.2-10.el7.x86_64                               279/314
+    openstack:   Cleanup    : tzdata-2019a-1.el7.noarch                                315/316
     openstack:  
-    openstack:   Cleanup    : diffutils-3.3-4.el7.x86_64                               280/314
+    openstack:   Cleanup    : libgcc-4.8.5-36.el7_6.2.x86_64                           316/316
     openstack:  
-    openstack:   Cleanup    : libcom_err-1.42.9-13.el7.x86_64                          281/314
+    openstack:   Verifying  : procps-ng-3.3.10-26.el7_7.1.x86_64                         1/316
     openstack:  
-    openstack:   Cleanup    : libcap-2.22-9.el7.x86_64                                 282/314
+    openstack:   Verifying  : tzdata-2019c-1.el7.noarch                                  2/316
     openstack:  
-    openstack:   Cleanup    : audit-libs-2.8.4-4.el7.x86_64                            283/314
+    openstack:   Verifying  : yum-3.4.3-163.el7.centos.noarch                            3/316
     openstack:  
-    openstack:   Cleanup    : libdb-5.3.21-24.el7.x86_64                               284/314
+    openstack:   Verifying  : libdb-utils-5.3.21-25.el7.x86_64                           4/316
     openstack:  
-    openstack:   Cleanup    : libuuid-2.23.2-59.el7_6.1.x86_64                         285/314
+    openstack:   Verifying  : biosdevname-0.7.3-2.el7.x86_64                             5/316
     openstack:  
-    openstack:   Cleanup    : elfutils-libelf-0.172-2.el7.x86_64                       286/314
+    openstack:   Verifying  : lshw-B.02.18-13.el7.x86_64                                 6/316
     openstack:  
-    openstack:   Cleanup    : lz4-1.7.5-2.el7.x86_64                                   287/314
+    openstack:   Verifying  : elfutils-default-yama-scope-0.176-2.el7.noarch             7/316
     openstack:  
-    openstack:   Cleanup    : libsmartcols-2.23.2-59.el7_6.1.x86_64                    288/314
+    openstack:   Verifying  : 10:qemu-guest-agent-2.12.0-3.el7.x86_64                    8/316
     openstack:  
-    openstack:   Cleanup    : libtalloc-2.1.13-1.el7.x86_64                            289/314
+    openstack:   Verifying  : 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64             9/316
     openstack:  
-    openstack:   Cleanup    : 2:vim-minimal-7.4.160-5.el7.x86_64                       290/314
+    openstack:   Verifying  : 1:cups-libs-1.6.3-40.el7.x86_64                           10/316
     openstack:  
-    openstack:   Cleanup    : libteam-1.27-5.el7.x86_64                                291/314
+    openstack:   Verifying  : python-libs-2.7.5-86.el7.x86_64                           11/316
     openstack:  
-    openstack:   Cleanup    : kernel-tools-libs-3.10.0-957.12.2.el7.x86_64             292/314
+    openstack:   Verifying  : readline-6.2-11.el7.x86_64                                12/316
     openstack:  
-    openstack:   Cleanup    : libtdb-1.3.15-1.el7.x86_64                               293/314
+    openstack:   Verifying  : rsyslog-8.24.0-41.el7_7.2.x86_64                          13/316
     openstack:  
-    openstack:   Cleanup    : ipset-libs-6.38-3.el7_6.x86_64                           294/314
+    openstack:   Verifying  : chrony-3.4-1.el7.x86_64                                   14/316
     openstack:  
-    openstack:   Cleanup    : libndp-1.2-7.el7.x86_64                                  295/314
+    openstack:   Verifying  : libgcc-4.8.5-39.el7.x86_64                                15/316
     openstack:  
-    openstack:   Cleanup    : sg3_utils-libs-1.37-17.el7.x86_64                        296/314
+    openstack:   Verifying  : ca-certificates-2019.2.32-76.el7_7.noarch                 16/316
     openstack:  
-    openstack:   Cleanup    : libseccomp-2.3.1-3.el7.x86_64                            297/314
+    openstack:   Verifying  : nss-pem-1.0.3-7.el7.x86_64                                17/316
     openstack:  
-    openstack:   Cleanup    : GeoIP-1.5.0-13.el7.x86_64                                298/314
+    openstack:   Verifying  : tuned-2.11.0-5.el7_7.1.noarch                             18/316
     openstack:  
-    openstack:   Cleanup    : hostname-3.13-3.el7.x86_64                               299/314
+    openstack:   Verifying  : grubby-8.28-26.el7.x86_64                                 19/316
     openstack:  
-    openstack:   Cleanup    : libmspack-0.5-0.6.alpha.el7.x86_64                       300/314
+    openstack:   Verifying  : libtevent-0.9.37-1.el7.x86_64                             20/316
     openstack:  
-    openstack:   Cleanup    : 2:ethtool-4.8-9.el7.x86_64                               301/314
+    openstack:   Verifying  : openssh-server-7.4p1-21.el7.x86_64                        21/316
     openstack:  
-    openstack:   Cleanup    : 1:dmidecode-3.1-2.el7.x86_64                             302/314
+    openstack:   Verifying  : nss-util-3.44.0-3.el7.x86_64                              22/316
     openstack:  
-    openstack:   Cleanup    : 1:grub2-common-2.02-0.76.el7.centos.1.noarch             303/314
+    openstack:   Verifying  : libss-1.42.9-16.el7.x86_64                                23/316
     openstack:  
-    openstack:   Cleanup    : firewalld-filesystem-0.5.3-5.el7.noarch                  304/314
+    openstack:   Verifying  : lz4-1.7.5-3.el7.x86_64                                    24/316
     openstack:  
-    openstack:   Cleanup    : 1:quota-nls-4.01-17.el7.noarch                           305/314
+    openstack:   Verifying  : 2:shadow-utils-4.6-5.el7.x86_64                           25/316
     openstack:  
-    openstack:   Cleanup    : 32:bind-license-9.9.4-73.el7_6.noarch                    306/314
+    openstack:   Verifying  : 1:quota-4.01-19.el7.x86_64                                26/316
     openstack:  
-    openstack:   Cleanup    : glibc-common-2.17-260.el7_6.5.x86_64                     307/314
+    openstack:   Verifying  : 32:bind-libs-lite-9.11.4-9.P2.el7.x86_64                  27/316
     openstack:  
-    openstack:   Cleanup    : bash-4.2.46-31.el7.x86_64                                308/314
+    openstack:   Verifying  : 1:openssl-libs-1.0.2k-19.el7.x86_64                       28/316
     openstack:  
-    openstack:   Cleanup    : nspr-4.19.0-1.el7_5.x86_64                               309/314
+    openstack:   Verifying  : 12:dhcp-libs-4.2.5-77.el7.centos.x86_64                   29/316
     openstack:  
-    openstack:   Cleanup    : nss-util-3.36.0-1.1.el7_6.x86_64                         310/314
+    openstack:   Verifying  : libtalloc-2.1.14-1.el7.x86_64                             30/316
     openstack:  
-    openstack:   Cleanup    : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                 311/314
+    openstack:   Verifying  : xfsprogs-4.5.0-20.el7.x86_64                              31/316
     openstack:  
-    openstack:   Cleanup    : glibc-2.17-260.el7_6.5.x86_64                            312/314
+    openstack:   Verifying  : 1:grub2-common-2.02-0.80.el7.centos.noarch                32/316
     openstack:  
-    openstack:   Cleanup    : tzdata-2019a-1.el7.noarch                                313/314
+    openstack:   Verifying  : hwdata-0.252-9.3.el7.x86_64                               33/316
     openstack:  
-    openstack:   Cleanup    : libgcc-4.8.5-36.el7_6.2.x86_64                           314/314
+    openstack:   Verifying  : libgomp-4.8.5-39.el7.x86_64                               34/316
     openstack:  
-    openstack:   Verifying  : procps-ng-3.3.10-26.el7_7.1.x86_64                         1/314
+    openstack:   Verifying  : python2-chardet-3.0.4-7.el7.noarch                        35/316
     openstack:  
-    openstack:   Verifying  : tzdata-2019c-1.el7.noarch                                  2/314
+    openstack:   Verifying  : libmspack-0.5-0.7.alpha.el7.x86_64                        36/316
     openstack:  
-    openstack:   Verifying  : yum-3.4.3-163.el7.centos.noarch                            3/314
+    openstack:   Verifying  : systemd-219-67.el7_7.2.x86_64                             37/316
     openstack:  
-    openstack:   Verifying  : libdb-utils-5.3.21-25.el7.x86_64                           4/314
+    openstack:   Verifying  : 1:grub2-pc-2.02-0.80.el7.centos.x86_64                    38/316
     openstack:  
-    openstack:   Verifying  : biosdevname-0.7.3-2.el7.x86_64                             5/314
+    openstack:   Verifying  : freetype-2.8-14.el7.x86_64                                39/316
     openstack:  
-    openstack:   Verifying  : lshw-B.02.18-13.el7.x86_64                                 6/314
+    openstack:   Verifying  : util-linux-2.23.2-61.el7_7.1.x86_64                       40/316
     openstack:  
-    openstack:   Verifying  : elfutils-default-yama-scope-0.176-2.el7.noarch             7/314
+    openstack:   Verifying  : geoipupdate-2.5.0-1.el7.x86_64                            41/316
     openstack:  
-    openstack:   Verifying  : 10:qemu-guest-agent-2.12.0-3.el7.x86_64                    8/314
+    openstack:   Verifying  : coreutils-8.22-24.el7.x86_64                              42/316
     openstack:  
-    openstack:   Verifying  : 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64             9/314
+    openstack:   Verifying  : sg3_utils-libs-1.37-18.el7_7.1.x86_64                     43/316
     openstack:  
-    openstack:   Verifying  : 1:cups-libs-1.6.3-40.el7.x86_64                           10/314
+    openstack:   Verifying  : iptables-1.4.21-33.el7.x86_64                             44/316
     openstack:  
-    openstack:   Verifying  : python-libs-2.7.5-86.el7.x86_64                           11/314
+    openstack:   Verifying  : ipset-7.1-1.el7.x86_64                                    45/316
     openstack:  
-    openstack:   Verifying  : readline-6.2-11.el7.x86_64                                12/314
+    openstack:   Verifying  : samba-common-libs-4.9.1-10.el7_7.x86_64                   46/316
     openstack:  
-    openstack:   Verifying  : rsyslog-8.24.0-41.el7_7.2.x86_64                          13/314
+    openstack:   Verifying  : GeoIP-1.5.0-14.el7.x86_64                                 47/316
     openstack:  
-    openstack:   Verifying  : chrony-3.4-1.el7.x86_64                                   14/314
+    openstack:   Verifying  : libteam-1.27-9.el7.x86_64                                 48/316
     openstack:  
-    openstack:   Verifying  : libgcc-4.8.5-39.el7.x86_64                                15/314
+    openstack:   Verifying  : iproute-4.11.0-25.el7_7.2.x86_64                          49/316
     openstack:  
-    openstack:   Verifying  : nss-pem-1.0.3-7.el7.x86_64                                16/314
+    openstack:   Verifying  : libcurl-7.29.0-54.el7_7.1.x86_64                          50/316
     openstack:  
-    openstack:   Verifying  : tuned-2.11.0-5.el7_7.1.noarch                             17/314
+    openstack:   Verifying  : glib2-2.56.1-5.el7.x86_64                                 51/316
     openstack:  
-    openstack:   Verifying  : grubby-8.28-26.el7.x86_64                                 18/314
+    openstack:   Verifying  : 32:bind-export-libs-9.11.4-9.P2.el7.x86_64                52/316
     openstack:  
-    openstack:   Verifying  : libtevent-0.9.37-1.el7.x86_64                             19/314
+    openstack:   Verifying  : libuuid-2.23.2-61.el7_7.1.x86_64                          53/316
     openstack:  
-    openstack:   Verifying  : openssh-server-7.4p1-21.el7.x86_64                        20/314
+    openstack:   Verifying  : 1:make-3.82-24.el7.x86_64                                 54/316
     openstack:  
-    openstack:   Verifying  : libss-1.42.9-16.el7.x86_64                                21/314
+    openstack:   Verifying  : 2:vim-minimal-7.4.629-6.el7.x86_64                        55/316
     openstack:  
-    openstack:   Verifying  : lz4-1.7.5-3.el7.x86_64                                    22/314
+    openstack:   Verifying  : 1:grub2-2.02-0.80.el7.centos.x86_64                       56/316
     openstack:  
-    openstack:   Verifying  : 2:shadow-utils-4.6-5.el7.x86_64                           23/314
+    openstack:   Verifying  : e2fsprogs-1.42.9-16.el7.x86_64                            57/316
     openstack:  
-    openstack:   Verifying  : 1:make-3.82-24.el7.x86_64                                 24/314
+    openstack:   Verifying  : passwd-0.79-5.el7.x86_64                                  58/316
     openstack:  
-    openstack:   Verifying  : 1:quota-4.01-19.el7.x86_64                                25/314
+    openstack:   Verifying  : nss-sysinit-3.44.0-4.el7.x86_64                           59/316
     openstack:  
-    openstack:   Verifying  : samba-client-libs-4.9.1-6.el7.x86_64                      26/314
+    openstack:   Verifying  : openssh-clients-7.4p1-21.el7.x86_64                       60/316
     openstack:  
-    openstack:   Verifying  : 32:bind-libs-lite-9.11.4-9.P2.el7.x86_64                  27/314
+    openstack:   Verifying  : 32:bind-license-9.11.4-9.P2.el7.noarch                    61/316
     openstack:  
-    openstack:   Verifying  : 1:openssl-libs-1.0.2k-19.el7.x86_64                       28/314
+    openstack:   Verifying  : 1:openssl-1.0.2k-19.el7.x86_64                            62/316
     openstack:  
-    openstack:   Verifying  : 12:dhcp-libs-4.2.5-77.el7.centos.x86_64                   29/314
+    openstack:   Verifying  : libwbclient-4.9.1-10.el7_7.x86_64                         63/316
     openstack:  
-    openstack:   Verifying  : nss-softokn-freebl-3.44.0-5.el7.x86_64                    30/314
+    openstack:   Verifying  : policycoreutils-2.5-33.el7.x86_64                         64/316
     openstack:  
-    openstack:   Verifying  : libtalloc-2.1.14-1.el7.x86_64                             31/314
+    openstack:   Verifying  : kernel-tools-3.10.0-1062.9.1.el7.x86_64                   65/316
     openstack:  
-    openstack:   Verifying  : samba-common-4.9.1-6.el7.noarch                           32/314
+    openstack:   Verifying  : nss-3.44.0-4.el7.x86_64                                   66/316
     openstack:  
-    openstack:   Verifying  : xfsprogs-4.5.0-20.el7.x86_64                              33/314
+    openstack:   Verifying  : polkit-0.112-22.el7_7.1.x86_64                            67/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-common-2.02-0.80.el7.centos.noarch                34/314
+    openstack:   Verifying  : python2-six-1.12.0-1.el7.noarch                           68/316
     openstack:  
-    openstack:   Verifying  : hwdata-0.252-9.3.el7.x86_64                               35/314
+    openstack:   Verifying  : yum-utils-1.1.31-52.el7.noarch                            69/316
     openstack:  
-    openstack:   Verifying  : libgomp-4.8.5-39.el7.x86_64                               36/314
+    openstack:   Verifying  : elfutils-libs-0.176-2.el7.x86_64                          70/316
     openstack:  
-    openstack:   Verifying  : python2-chardet-3.0.4-7.el7.noarch                        37/314
+    openstack:   Verifying  : e2fsprogs-libs-1.42.9-16.el7.x86_64                       71/316
     openstack:  
-    openstack:   Verifying  : libmspack-0.5-0.7.alpha.el7.x86_64                        38/314
+    openstack:   Verifying  : kernel-3.10.0-1062.9.1.el7.x86_64                         72/316
     openstack:  
-    openstack:   Verifying  : systemd-219-67.el7_7.2.x86_64                             39/314
+    openstack:   Verifying  : cronie-anacron-1.4.11-23.el7.x86_64                       73/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-pc-2.02-0.80.el7.centos.x86_64                    40/314
+    openstack:   Verifying  : nspr-4.21.0-1.el7.x86_64                                  74/316
     openstack:  
-    openstack:   Verifying  : freetype-2.8-14.el7.x86_64                                41/314
+    openstack:   Verifying  : nss-softokn-3.44.0-5.el7.x86_64                           75/316
     openstack:  
-    openstack:   Verifying  : geoipupdate-2.5.0-1.el7.x86_64                            42/314
+    openstack:   Verifying  : 1:NetworkManager-tui-1.18.0-5.el7_7.1.x86_64              76/316
     openstack:  
-    openstack:   Verifying  : coreutils-8.22-24.el7.x86_64                              43/314
+    openstack:   Verifying  : rpm-build-libs-4.11.3-40.el7.x86_64                       77/316
     openstack:  
-    openstack:   Verifying  : sg3_utils-libs-1.37-18.el7_7.1.x86_64                     44/314
+    openstack:   Verifying  : nss-tools-3.44.0-4.el7.x86_64                             78/316
     openstack:  
-    openstack:   Verifying  : util-linux-2.23.2-61.el7.x86_64                           45/314
+    openstack:   Verifying  : 1:grub2-tools-2.02-0.80.el7.centos.x86_64                 79/316
     openstack:  
-    openstack:   Verifying  : iptables-1.4.21-33.el7.x86_64                             46/314
+    openstack:   Verifying  : libcom_err-1.42.9-16.el7.x86_64                           80/316
     openstack:  
-    openstack:   Verifying  : ipset-7.1-1.el7.x86_64                                    47/314
+    openstack:   Verifying  : 1:dmidecode-3.2-3.el7.x86_64                              81/316
     openstack:  
-    openstack:   Verifying  : nss-util-3.44.0-3.el7.x86_64                              48/314
+    openstack:   Verifying  : 1:NetworkManager-team-1.18.0-5.el7_7.1.x86_64             82/316
     openstack:  
-    openstack:   Verifying  : GeoIP-1.5.0-14.el7.x86_64                                 49/314
+    openstack:   Verifying  : systemd-libs-219-67.el7_7.2.x86_64                        83/316
     openstack:  
-    openstack:   Verifying  : libteam-1.27-9.el7.x86_64                                 50/314
+    openstack:   Verifying  : centos-release-7-7.1908.0.el7.centos.x86_64               84/316
     openstack:  
-    openstack:   Verifying  : kernel-tools-libs-3.10.0-1062.4.1.el7.x86_64              51/314
+    openstack:   Verifying  : linux-firmware-20190429-72.gitddde598.el7.noarch          85/316
     openstack:  
-    openstack:   Verifying  : glib2-2.56.1-5.el7.x86_64                                 52/314
+    openstack:   Verifying  : audit-libs-2.8.5-4.el7.x86_64                             86/316
     openstack:  
-    openstack:   Verifying  : 32:bind-export-libs-9.11.4-9.P2.el7.x86_64                53/314
+    openstack:   Verifying  : cryptsetup-libs-2.0.3-5.el7.x86_64                        87/316
     openstack:  
-    openstack:   Verifying  : libmount-2.23.2-61.el7.x86_64                             54/314
+    openstack:   Verifying  : python-perf-3.10.0-1062.9.1.el7.x86_64                    88/316
     openstack:  
-    openstack:   Verifying  : 2:vim-minimal-7.4.629-6.el7.x86_64                        55/314
+    openstack:   Verifying  : initscripts-9.49.47-1.el7.x86_64                          89/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-2.02-0.80.el7.centos.x86_64                       56/314
+    openstack:   Verifying  : libdrm-2.4.97-2.el7.x86_64                                90/316
     openstack:  
-    openstack:   Verifying  : e2fsprogs-1.42.9-16.el7.x86_64                            57/314
+    openstack:   Verifying  : teamd-1.27-9.el7.x86_64                                   91/316
     openstack:  
-    openstack:   Verifying  : passwd-0.79-5.el7.x86_64                                  58/314
+    openstack:   Verifying  : samba-common-4.9.1-10.el7_7.noarch                        92/316
     openstack:  
-    openstack:   Verifying  : nss-sysinit-3.44.0-4.el7.x86_64                           59/314
+    openstack:   Verifying  : firewalld-filesystem-0.6.3-2.el7_7.2.noarch               93/316
     openstack:  
-    openstack:   Verifying  : openssh-clients-7.4p1-21.el7.x86_64                       60/314
+    openstack:   Verifying  : ipset-libs-7.1-1.el7.x86_64                               94/316
     openstack:  
-    openstack:   Verifying  : 32:bind-license-9.11.4-9.P2.el7.noarch                    61/314
+    openstack:   Verifying  : hostname-3.13-3.el7_7.1.x86_64                            95/316
     openstack:  
-    openstack:   Verifying  : 1:openssl-1.0.2k-19.el7.x86_64                            62/314
+    openstack:   Verifying  : libdb-5.3.21-25.el7.x86_64                                96/316
     openstack:  
-    openstack:   Verifying  : iproute-4.11.0-25.el7.x86_64                              63/314
+    openstack:   Verifying  : binutils-2.27-41.base.el7_7.1.x86_64                      97/316
     openstack:  
-    openstack:   Verifying  : policycoreutils-2.5-33.el7.x86_64                         64/314
+    openstack:   Verifying  : libssh2-1.8.0-3.el7.x86_64                                98/316
     openstack:  
-    openstack:   Verifying  : nss-3.44.0-4.el7.x86_64                                   65/314
+    openstack:   Verifying  : cronie-1.4.11-23.el7.x86_64                               99/316
     openstack:  
-    openstack:   Verifying  : polkit-0.112-22.el7_7.1.x86_64                            66/314
+    openstack:   Verifying  : glibc-common-2.17-292.el7.x86_64                         100/316
     openstack:  
-    openstack:   Verifying  : python2-six-1.12.0-1.el7.noarch                           67/314
+    openstack:   Verifying  : sudo-1.8.23-4.el7_7.1.x86_64                             101/316
     openstack:  
-    openstack:   Verifying  : yum-utils-1.1.31-52.el7.noarch                            68/314
+    openstack:   Verifying  : gssproxy-0.7.0-26.el7.x86_64                             102/316
     openstack:  
-    openstack:   Verifying  : elfutils-libs-0.176-2.el7.x86_64                          69/314
+    openstack:   Verifying  : selinux-policy-targeted-3.13.1-252.el7_7.6.noarch        103/316
     openstack:  
-    openstack:   Verifying  : e2fsprogs-libs-1.42.9-16.el7.x86_64                       70/314
+    openstack:   Verifying  : firewalld-0.6.3-2.el7_7.2.noarch                         104/316
     openstack:  
-    openstack:   Verifying  : numactl-libs-2.0.12-3.el7.x86_64                          71/314
+    openstack:   Verifying  : rpm-4.11.3-40.el7.x86_64                                 105/316
     openstack:  
-    openstack:   Verifying  : cronie-anacron-1.4.11-23.el7.x86_64                       72/314
+    openstack:   Verifying  : 3:mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64           106/316
     openstack:  
-    openstack:   Verifying  : libuuid-2.23.2-61.el7.x86_64                              73/314
+    openstack:   Verifying  : kmod-libs-20-25.el7.x86_64                               107/316
     openstack:  
-    openstack:   Verifying  : nspr-4.21.0-1.el7.x86_64                                  74/314
+    openstack:   Verifying  : 1:grub2-tools-minimal-2.02-0.80.el7.centos.x86_64        108/316
     openstack:  
-    openstack:   Verifying  : nss-softokn-3.44.0-5.el7.x86_64                           75/314
+    openstack:   Verifying  : libblkid-2.23.2-61.el7_7.1.x86_64                        109/316
     openstack:  
-    openstack:   Verifying  : 1:NetworkManager-tui-1.18.0-5.el7_7.1.x86_64              76/314
+    openstack:   Verifying  : libtirpc-0.2.4-0.16.el7.x86_64                           110/316
     openstack:  
-    openstack:   Verifying  : rpm-build-libs-4.11.3-40.el7.x86_64                       77/314
+    openstack:   Verifying  : 1:grub2-tools-extra-2.02-0.80.el7.centos.x86_64          111/316
     openstack:  
-    openstack:   Verifying  : nss-tools-3.44.0-4.el7.x86_64                             78/314
+    openstack:   Verifying  : 7:device-mapper-1.02.158-2.el7_7.2.x86_64                112/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-tools-2.02-0.80.el7.centos.x86_64                 79/314
+    openstack:   Verifying  : 2:ethtool-4.8-10.el7.x86_64                              113/316
     openstack:  
-    openstack:   Verifying  : libcom_err-1.42.9-16.el7.x86_64                           80/314
+    openstack:   Verifying  : libicu-50.2-3.el7.x86_64                                 114/316
     openstack:  
-    openstack:   Verifying  : 1:dmidecode-3.2-3.el7.x86_64                              81/314
+    openstack:   Verifying  : bash-4.2.46-33.el7.x86_64                                115/316
     openstack:  
-    openstack:   Verifying  : 1:NetworkManager-team-1.18.0-5.el7_7.1.x86_64             82/314
+    openstack:   Verifying  : parted-3.1-31.el7.x86_64                                 116/316
     openstack:  
-    openstack:   Verifying  : systemd-libs-219-67.el7_7.2.x86_64                        83/314
+    openstack:   Verifying  : python2-pyudev-0.18.1-6.el7.noarch                       117/316
     openstack:  
-    openstack:   Verifying  : centos-release-7-7.1908.0.el7.centos.x86_64               84/314
+    openstack:   Verifying  : kpartx-0.4.9-127.el7.x86_64                              118/316
     openstack:  
-    openstack:   Verifying  : linux-firmware-20190429-72.gitddde598.el7.noarch          85/314
+    openstack:   Verifying  : python-linux-procfs-0.4.11-4.el7.noarch                  119/316
     openstack:  
-    openstack:   Verifying  : audit-libs-2.8.5-4.el7.x86_64                             86/314
+    openstack:   Verifying  : openssh-7.4p1-21.el7.x86_64                              120/316
     openstack:  
-    openstack:   Verifying  : libwbclient-4.9.1-6.el7.x86_64                            87/314
+    openstack:   Verifying  : 1:NetworkManager-libnm-1.18.0-5.el7_7.1.x86_64           121/316
     openstack:  
-    openstack:   Verifying  : cryptsetup-libs-2.0.3-5.el7.x86_64                        88/314
+    openstack:   Verifying  : diffutils-3.3-5.el7.x86_64                               122/316
     openstack:  
-    openstack:   Verifying  : initscripts-9.49.47-1.el7.x86_64                          89/314
+    openstack:   Verifying  : open-vm-tools-10.3.0-2.el7.x86_64                        123/316
     openstack:  
-    openstack:   Verifying  : kernel-tools-3.10.0-1062.4.1.el7.x86_64                   90/314
+    openstack:   Verifying  : systemd-sysv-219-67.el7_7.2.x86_64                       124/316
     openstack:  
-    openstack:   Verifying  : libdrm-2.4.97-2.el7.x86_64                                91/314
+    openstack:   Verifying  : samba-client-libs-4.9.1-10.el7_7.x86_64                  125/316
     openstack:  
-    openstack:   Verifying  : teamd-1.27-9.el7.x86_64                                   92/314
+    openstack:   Verifying  : selinux-policy-3.13.1-252.el7_7.6.noarch                 126/316
     openstack:  
-    openstack:   Verifying  : firewalld-filesystem-0.6.3-2.el7_7.2.noarch               93/314
+    openstack:   Verifying  : 1:grub2-pc-modules-2.02-0.80.el7.centos.noarch           127/316
     openstack:  
-    openstack:   Verifying  : ipset-libs-7.1-1.el7.x86_64                               94/314
+    openstack:   Verifying  : kmod-20-25.el7.x86_64                                    128/316
     openstack:  
-    openstack:   Verifying  : hostname-3.13-3.el7_7.1.x86_64                            95/314
+    openstack:   Verifying  : iprutils-2.4.17.1-2.el7.x86_64                           129/316
     openstack:  
-    openstack:   Verifying  : libsmartcols-2.23.2-61.el7.x86_64                         96/314
+    openstack:   Verifying  : 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64             130/316
     openstack:  
-    openstack:   Verifying  : libdb-5.3.21-25.el7.x86_64                                97/314
+    openstack:   Verifying  : 1:nfs-utils-1.3.0-0.65.el7.x86_64                        131/316
     openstack:  
-    openstack:   Verifying  : libblkid-2.23.2-61.el7.x86_64                             98/314
+    openstack:   Verifying  : libldb-1.4.2-1.el7.x86_64                                132/316
     openstack:  
-    openstack:   Verifying  : selinux-policy-targeted-3.13.1-252.el7.1.noarch           99/314
+    openstack:   Verifying  : libstdc++-4.8.5-39.el7.x86_64                            133/316
     openstack:  
-    openstack:   Verifying  : binutils-2.27-41.base.el7_7.1.x86_64                     100/314
+    openstack:   Verifying  : krb5-libs-1.15.1-37.el7_7.2.x86_64                       134/316
     openstack:  
-    openstack:   Verifying  : selinux-policy-3.13.1-252.el7.1.noarch                   101/314
+    openstack:   Verifying  : dracut-033-564.el7.x86_64                                135/316
     openstack:  
-    openstack:   Verifying  : libssh2-1.8.0-3.el7.x86_64                               102/314
+    openstack:   Verifying  : rpm-python-4.11.3-40.el7.x86_64                          136/316
     openstack:  
-    openstack:   Verifying  : cronie-1.4.11-23.el7.x86_64                              103/314
+    openstack:   Verifying  : audit-2.8.5-4.el7.x86_64                                 137/316
     openstack:  
-    openstack:   Verifying  : sg3_utils-1.37-18.el7_7.1.x86_64                         104/314
+    openstack:   Verifying  : kernel-tools-libs-3.10.0-1062.9.1.el7.x86_64             138/316
     openstack:  
-    openstack:   Verifying  : kernel-3.10.0-1062.4.1.el7.x86_64                        105/314
+    openstack:   Verifying  : python-2.7.5-86.el7.x86_64                               139/316
     openstack:  
-    openstack:   Verifying  : sudo-1.8.23-4.el7_7.1.x86_64                             106/314
+    openstack:   Verifying  : libmount-2.23.2-61.el7_7.1.x86_64                        140/316
     openstack:  
-    openstack:   Verifying  : gssproxy-0.7.0-26.el7.x86_64                             107/314
+    openstack:   Verifying  : 7:device-mapper-libs-1.02.158-2.el7_7.2.x86_64           141/316
     openstack:  
-    openstack:   Verifying  : firewalld-0.6.3-2.el7_7.2.noarch                         108/314
+    openstack:   Verifying  : numactl-libs-2.0.12-3.el7_7.1.x86_64                     142/316
     openstack:  
-    openstack:   Verifying  : rpm-4.11.3-40.el7.x86_64                                 109/314
+    openstack:   Verifying  : 1:NetworkManager-1.18.0-5.el7_7.1.x86_64                 143/316
     openstack:  
-    openstack:   Verifying  : 3:mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64           110/314
+    openstack:   Verifying  : curl-7.29.0-54.el7_7.1.x86_64                            144/316
     openstack:  
-    openstack:   Verifying  : kmod-libs-20-25.el7.x86_64                               111/314
+    openstack:   Verifying  : libndp-1.2-9.el7.x86_64                                  145/316
     openstack:  
-    openstack:   Verifying  : glibc-common-2.17-292.el7.x86_64                         112/314
+    openstack:   Verifying  : libcap-2.22-10.el7.x86_64                                146/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-tools-minimal-2.02-0.80.el7.centos.x86_64        113/314
+    openstack:   Verifying  : 12:dhcp-common-4.2.5-77.el7.centos.x86_64                147/316
     openstack:  
-    openstack:   Verifying  : libtirpc-0.2.4-0.16.el7.x86_64                           114/314
+    openstack:   Verifying  : glibc-2.17-292.el7.x86_64                                148/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-tools-extra-2.02-0.80.el7.centos.x86_64          115/314
+    openstack:   Verifying  : nss-softokn-freebl-3.44.0-5.el7.x86_64                   149/316
     openstack:  
-    openstack:   Verifying  : 7:device-mapper-1.02.158-2.el7_7.2.x86_64                116/314
+    openstack:   Verifying  : libseccomp-2.4.1-0.el7.x86_64                            150/316
     openstack:  
-    openstack:   Verifying  : 2:ethtool-4.8-10.el7.x86_64                              117/314
+    openstack:   Verifying  : rpcbind-0.2.0-48.el7.x86_64                              151/316
     openstack:  
-    openstack:   Verifying  : libicu-50.2-3.el7.x86_64                                 118/314
+    openstack:   Verifying  : 3:irqbalance-1.0.7-12.el7.x86_64                         152/316
     openstack:  
-    openstack:   Verifying  : bash-4.2.46-33.el7.x86_64                                119/314
+    openstack:   Verifying  : yum-plugin-fastestmirror-1.1.31-52.el7.noarch            153/316
     openstack:  
-    openstack:   Verifying  : parted-3.1-31.el7.x86_64                                 120/314
+    openstack:   Verifying  : libsmartcols-2.23.2-61.el7_7.1.x86_64                    154/316
     openstack:  
-    openstack:   Verifying  : python2-pyudev-0.18.1-6.el7.noarch                       121/314
+    openstack:   Verifying  : python-firewall-0.6.3-2.el7_7.2.noarch                   155/316
     openstack:  
-    openstack:   Verifying  : kpartx-0.4.9-127.el7.x86_64                              122/314
+    openstack:   Verifying  : libtdb-1.3.16-1.el7.x86_64                               156/316
     openstack:  
-    openstack:   Verifying  : python-perf-3.10.0-1062.4.1.el7.x86_64                   123/314
+    openstack:   Verifying  : sg3_utils-1.37-18.el7_7.1.x86_64                         157/316
     openstack:  
-    openstack:   Verifying  : python-linux-procfs-0.4.11-4.el7.noarch                  124/314
+    openstack:   Verifying  : elfutils-libelf-0.176-2.el7.x86_64                       158/316
     openstack:  
-    openstack:   Verifying  : samba-common-libs-4.9.1-6.el7.x86_64                     125/314
+    openstack:   Verifying  : rpm-libs-4.11.3-40.el7.x86_64                            159/316
     openstack:  
-    openstack:   Verifying  : openssh-7.4p1-21.el7.x86_64                              126/314
+    openstack:   Verifying  : 12:dhclient-4.2.5-77.el7.centos.x86_64                   160/316
     openstack:  
-    openstack:   Verifying  : 1:NetworkManager-libnm-1.18.0-5.el7_7.1.x86_64           127/314
+    openstack:   Verifying  : 1:quota-nls-4.01-19.el7.noarch                           161/316
     openstack:  
-    openstack:   Verifying  : diffutils-3.3-5.el7.x86_64                               128/314
+    openstack:   Verifying  : rpm-python-4.11.3-35.el7.x86_64                          162/316 
+    openstack:   Verifying  : nss-pem-1.0.3-5.el7_6.1.x86_64                           163/316 
+    openstack:   Verifying  : iproute-4.11.0-14.el7_6.2.x86_64                         164/316 
+    openstack:   Verifying  : libblkid-2.23.2-59.el7_6.1.x86_64                        165/316 
+    openstack:   Verifying  : 3:irqbalance-1.0.7-11.el7.x86_64                         166/316 
+    openstack:   Verifying  : open-vm-tools-10.2.5-3.el7.x86_64                        167/316 
+    openstack:   Verifying  : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                 168/316 
+    openstack:   Verifying  : teamd-1.27-5.el7.x86_64                                  169/316 
+    openstack:   Verifying  : cryptsetup-libs-2.0.3-3.el7.x86_64                       170/316 
+    openstack:   Verifying  : 2:vim-minimal-7.4.160-5.el7.x86_64                       171/316 
+    openstack:   Verifying  : 1:grub2-common-2.02-0.76.el7.centos.1.noarch             172/316 
+    openstack:   Verifying  : 1:quota-4.01-17.el7.x86_64                               173/316
     openstack:  
-    openstack:   Verifying  : open-vm-tools-10.3.0-2.el7.x86_64                        129/314
+    openstack:   Verifying  : GeoIP-1.5.0-13.el7.x86_64                                174/316 
+    openstack:   Verifying  : firewalld-0.5.3-5.el7.noarch                             175/316 
+    openstack:   Verifying  : 1:dmidecode-3.1-2.el7.x86_64                             176/316 
+    openstack:   Verifying  : glibc-common-2.17-260.el7_6.5.x86_64                     177/316 
+    openstack:   Verifying  : e2fsprogs-libs-1.42.9-13.el7.x86_64                      178/316 
+    openstack:   Verifying  : 12:dhcp-libs-4.2.5-68.el7.centos.1.x86_64                179/316 
+    openstack:   Verifying  : glibc-2.17-260.el7_6.5.x86_64                            180/316 
+    openstack:   Verifying  : ipset-libs-6.38-3.el7_6.x86_64                           181/316 
+    openstack:   Verifying  : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64              182/316 
+    openstack:   Verifying  : libtalloc-2.1.13-1.el7.x86_64                            183/316 
+    openstack:   Verifying  : libtevent-0.9.36-1.el7.x86_64                            184/316 
+    openstack:   Verifying  : nss-util-3.36.0-1.1.el7_6.x86_64                         185/316 
+    openstack:   Verifying  : kernel-tools-libs-3.10.0-957.12.2.el7.x86_64             186/316 
+    openstack:   Verifying  : 1:make-3.82-23.el7.x86_64                                187/316
     openstack:  
-    openstack:   Verifying  : systemd-sysv-219-67.el7_7.2.x86_64                       130/314
+    openstack:   Verifying  : 7:device-mapper-1.02.149-10.el7_6.7.x86_64               188/316 
+    openstack:   Verifying  : cronie-anacron-1.4.11-20.el7_6.x86_64                    189/316 
+    openstack:   Verifying  : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64            190/316 
+    openstack:   Verifying  : openssh-7.4p1-16.el7.x86_64                              191/316 
+    openstack:   Verifying  : python-pyudev-0.15-9.el7.noarch                          192/316 
+    openstack:   Verifying  : systemd-libs-219-62.el7_6.6.x86_64                       193/316 
+    openstack:   Verifying  : readline-6.2-10.el7.x86_64                               194/316 
+    openstack:   Verifying  : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64             195/316 
+    openstack:   Verifying  : lshw-B.02.18-12.el7.x86_64                               196/316 
+    openstack:   Verifying  : 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64                 197/316 
+    openstack:   Verifying  : rsyslog-8.24.0-34.el7.x86_64                             198/316 
+    openstack:   Verifying  : nss-tools-3.36.0-7.1.el7_6.x86_64                        199/316 
+    openstack:   Verifying  : nspr-4.19.0-1.el7_5.x86_64                               200/316
     openstack:  
-    openstack:   Verifying  : 1:grub2-pc-modules-2.02-0.80.el7.centos.noarch           131/314
+    openstack:   Verifying  : bash-4.2.46-31.el7.x86_64                                201/316 
+    openstack:   Verifying  : rpm-libs-4.11.3-35.el7.x86_64                            202/316 
+    openstack:   Verifying  : openssh-server-7.4p1-16.el7.x86_64                       203/316 
+    openstack:   Verifying  : initscripts-9.49.46-1.el7.x86_64                         204/316 
+    openstack:   Verifying  : libtdb-1.3.15-1.el7.x86_64                               205/316 
+    openstack:   Verifying  : libmount-2.23.2-59.el7_6.1.x86_64                        206/316 
+    openstack:   Verifying  : libstdc++-4.8.5-36.el7_6.2.x86_64                        207/316 
+    openstack:   Verifying  : libldb-1.3.4-1.el7.x86_64                                208/316 
+    openstack:   Verifying  : krb5-libs-1.15.1-37.el7_6.x86_64                         209/316 
+    openstack:   Verifying  : hwdata-0.252-9.1.el7.x86_64                              210/316 
+    openstack:   Verifying  : nss-sysinit-3.36.0-7.1.el7_6.x86_64                      211/316 
+    openstack:   Verifying  : 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64              212/316
     openstack:  
-    openstack:   Verifying  : kmod-20-25.el7.x86_64                                    132/314
+    openstack:   Verifying  : coreutils-8.22-23.el7.x86_64                             213/316 
+    openstack:   Verifying  : rpm-build-libs-4.11.3-35.el7.x86_64                      214/316 
+    openstack:   Verifying  : nss-3.36.0-7.1.el7_6.x86_64                              215/316 
+    openstack:   Verifying  : 1:openssl-1.0.2k-16.el7_6.1.x86_64                       216/316 
+    openstack:   Verifying  : elfutils-libelf-0.172-2.el7.x86_64                       217/316 
+    openstack:   Verifying  : 12:dhcp-common-4.2.5-68.el7.centos.1.x86_64              218/316 
+    openstack:   Verifying  : samba-client-libs-4.8.3-4.el7.x86_64                     219/316 
+    openstack:   Verifying  : 1:nfs-utils-1.3.0-0.61.el7.x86_64                        220/316 
+    openstack:   Verifying  : lz4-1.7.5-2.el7.x86_64                                   221/316 
+    openstack:   Verifying  : rpcbind-0.2.0-47.el7.x86_64                              222/316 
+    openstack:   Verifying  : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch       223/316
     openstack:  
-    openstack:   Verifying  : iprutils-2.4.17.1-2.el7.x86_64                           133/314
+    openstack:   Verifying  : util-linux-2.23.2-59.el7_6.1.x86_64                      224/316 
+    openstack:   Verifying  : elfutils-libs-0.172-2.el7.x86_64                         225/316 
+    openstack:   Verifying  : libsmartcols-2.23.2-59.el7_6.1.x86_64                    226/316 
+    openstack:   Verifying  : nss-softokn-3.36.0-5.el7_5.x86_64                        227/316 
+    openstack:   Verifying  : ca-certificates-2018.2.22-70.0.el7_5.noarch              228/316 
+    openstack:   Verifying  : tuned-2.10.0-6.el7_6.3.noarch                            229/316 
+    openstack:   Verifying  : yum-utils-1.1.31-50.el7.noarch                           230/316 
+    openstack:   Verifying  : 1:cups-libs-1.6.3-35.el7.x86_64                          231/316 
+    openstack:   Verifying  : cronie-1.4.11-20.el7_6.x86_64                            232/316 
+    openstack:   Verifying  : yum-3.4.3-161.el7.centos.noarch                          233/316 
+    openstack:   Verifying  : systemd-219-62.el7_6.6.x86_64                            234/316 
+    openstack:   Verifying  : audit-2.8.4-4.el7.x86_64                                 235/316 
+    openstack:   Verifying  : libdrm-2.4.91-3.el7.x86_64                               236/316 
+    openstack:   Verifying  : firewalld-filesystem-0.5.3-5.el7.noarch                  237/316
     openstack:  
-    openstack:   Verifying  : 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64             134/314
+    openstack:   Verifying  : libssh2-1.4.3-12.el7_6.2.x86_64                          238/316 
+    openstack:   Verifying  : kmod-libs-20-23.el7.x86_64                               239/316 
+    openstack:   Verifying  : libdb-utils-5.3.21-24.el7.x86_64                         240/316 
+    openstack:   Verifying  : 1:grub2-2.02-0.76.el7.centos.1.x86_64                    241/316 
+    openstack:   Verifying  : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                     242/316 
+    openstack:   Verifying  : libseccomp-2.3.1-3.el7.x86_64                            243/316 
+    openstack:   Verifying  : hostname-3.13-3.el7.x86_64                               244/316 
+    openstack:   Verifying  : systemd-sysv-219-62.el7_6.6.x86_64                       245/316 
+    openstack:   Verifying  : kernel-tools-3.10.0-957.12.2.el7.x86_64                  246/316 
+    openstack:   Verifying  : dracut-033-554.el7.x86_64                                247/316 
+    openstack:   Verifying  : policycoreutils-2.5-29.el7_6.1.x86_64                    248/316
     openstack:  
-    openstack:   Verifying  : 1:nfs-utils-1.3.0-0.65.el7.x86_64                        135/314
+    openstack:   Verifying  : passwd-0.79-4.el7.x86_64                                 249/316 
+    openstack:   Verifying  : tzdata-2019a-1.el7.noarch                                250/316 
+    openstack:   Verifying  : e2fsprogs-1.42.9-13.el7.x86_64                           251/316 
+    openstack:   Verifying  : sudo-1.8.23-3.el7.x86_64                                 252/316 
+    openstack:   Verifying  : glib2-2.56.1-2.el7.x86_64                                253/316 
+    openstack:   Verifying  : biosdevname-0.7.3-1.el7.x86_64                           254/316 
+    openstack:   Verifying  : rpm-4.11.3-35.el7.x86_64                                 255/316 
+    openstack:   Verifying  : binutils-2.27-34.base.el7.x86_64                         256/316 
+    openstack:   Verifying  : libuuid-2.23.2-59.el7_6.1.x86_64                         257/316 
+    openstack:   Verifying  : sg3_utils-1.37-17.el7.x86_64                             258/316 
+    openstack:   Verifying  : libgomp-4.8.5-36.el7_6.2.x86_64                          259/316 
+    openstack:   Verifying  : audit-libs-2.8.4-4.el7.x86_64                            260/316
     openstack:  
-    openstack:   Verifying  : libldb-1.4.2-1.el7.x86_64                                136/314
+    openstack:   Verifying  : 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64        261/316 
+    openstack:   Verifying  : linux-firmware-20180911-69.git85c5d90.el7.noarch         262/316 
+    openstack:   Verifying  : libdb-5.3.21-24.el7.x86_64                               263/316 
+    openstack:   Verifying  : numactl-libs-2.0.9-7.el7.x86_64                          264/316 
+    openstack:   Verifying  : kmod-20-23.el7.x86_64                                    265/316 
+    openstack:   Verifying  : python-libs-2.7.5-77.el7_6.x86_64                        266/316 
+    openstack:   Verifying  : libicu-50.1.2-17.el7.x86_64                              267/316 
+    openstack:   Verifying  : elfutils-default-yama-scope-0.172-2.el7.noarch           268/316 
+    openstack:   Verifying  : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64          269/316 
+    openstack:   Verifying  : gssproxy-0.7.0-21.el7.x86_64                             270/316 
+    openstack:   Verifying  : chrony-3.2-2.el7.x86_64                                  271/316 
+    openstack:   Verifying  : libcom_err-1.42.9-13.el7.x86_64                          272/316 
+    openstack:   Verifying  : samba-common-4.8.3-4.el7.noarch                          273/316
     openstack:  
-    openstack:   Verifying  : libstdc++-4.8.5-39.el7.x86_64                            137/314
+    openstack:   Verifying  : python-2.7.5-77.el7_6.x86_64                             274/316 
+    openstack:   Verifying  : python-firewall-0.5.3-5.el7.noarch                       275/316 
+    openstack:   Verifying  : libcurl-7.29.0-51.el7.x86_64                             276/316 
+    openstack:   Verifying  : python-linux-procfs-0.4.9-4.el7.noarch                   277/316 
+    openstack:   Verifying  : iptables-1.4.21-28.el7.x86_64                            278/316 
+    openstack:   Verifying  : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                  279/316 
+    openstack:   Verifying  : libteam-1.27-5.el7.x86_64                                280/316 
+    openstack:   Verifying  : selinux-policy-3.13.1-229.el7_6.12.noarch                281/316
     openstack:  
-    openstack:   Verifying  : krb5-libs-1.15.1-37.el7_7.2.x86_64                       138/314
+    openstack:   Verifying  : python-perf-3.10.0-957.12.2.el7.x86_64                   282/316 
+    openstack:   Verifying  : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                 283/316 
+    openstack:   Verifying  : openssh-clients-7.4p1-16.el7.x86_64                      284/316 
+    openstack:   Verifying  : 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64      285/316 
+    openstack:   Verifying  : freetype-2.8-12.el7_6.1.x86_64                           286/316 
+    openstack:   Verifying  : ipset-6.38-3.el7_6.x86_64                                287/316 
+    openstack:   Verifying  : 2:ethtool-4.8-9.el7.x86_64                               288/316 
+    openstack:   Verifying  : libtirpc-0.2.4-0.15.el7.x86_64                           289/316
     openstack:  
-    openstack:   Verifying  : dracut-033-564.el7.x86_64                                139/314
+    openstack:   Verifying  : 32:bind-license-9.9.4-73.el7_6.noarch                    290/316 
+    openstack:   Verifying  : sg3_utils-libs-1.37-17.el7.x86_64                        291/316 
+    openstack:   Verifying  : libmspack-0.5-0.6.alpha.el7.x86_64                       292/316 
+    openstack:   Verifying  : kpartx-0.4.9-123.el7.x86_64                              293/316 
+    openstack:   Verifying  : samba-common-libs-4.8.3-4.el7.x86_64                     294/316 
+    openstack:   Verifying  : iprutils-2.4.16.1-1.el7.x86_64                           295/316 
+    openstack:   Verifying  : procps-ng-3.3.10-23.el7.x86_64                           296/316 
+    openstack:   Verifying  : 12:dhclient-4.2.5-68.el7.centos.1.x86_64                 297/316 
+    openstack:   Verifying  : libss-1.42.9-13.el7.x86_64                               298/316 
+    openstack:   Verifying  : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                  299/316 
+    openstack:   Verifying  : yum-plugin-fastestmirror-1.1.31-50.el7.noarch            300/316 
+    openstack:   Verifying  : libgcc-4.8.5-36.el7_6.2.x86_64                           301/316 
+    openstack:   Verifying  : parted-3.1-29.el7.x86_64                                 302/316
     openstack:  
-    openstack:   Verifying  : rpm-python-4.11.3-40.el7.x86_64                          140/314
+    openstack:   Verifying  : polkit-0.112-18.el7_6.1.x86_64                           303/316 
+    openstack:   Verifying  : centos-release-7-6.1810.2.el7.centos.x86_64              304/316 
+    openstack:   Verifying  : libwbclient-4.8.3-4.el7.x86_64                           305/316 
+    openstack:   Verifying  : 1:quota-nls-4.01-17.el7.noarch                           306/316 
+    openstack:   Verifying  : libcap-2.22-9.el7.x86_64                                 307/316 
+    openstack:   Verifying  : 1:NetworkManager-1.12.0-10.el7_6.x86_64                  308/316 
+    openstack:   Verifying  : libndp-1.2-7.el7.x86_64                                  309/316 
+    openstack:   Verifying  : 10:qemu-guest-agent-2.12.0-2.el7.x86_64                  310/316 
+    openstack:   Verifying  : xfsprogs-4.5.0-19.el7_6.x86_64                           311/316 
+    openstack:   Verifying  : 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch         312/316 
+    openstack:   Verifying  : curl-7.29.0-51.el7.x86_64                                313/316 
+    openstack:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                      314/316
     openstack:  
-    openstack:   Verifying  : audit-2.8.5-4.el7.x86_64                                 141/314
-    openstack:  
-    openstack:   Verifying  : python-2.7.5-86.el7.x86_64                               142/314
-    openstack:  
-    openstack:   Verifying  : 7:device-mapper-libs-1.02.158-2.el7_7.2.x86_64           143/314
-    openstack:  
-    openstack:   Verifying  : 1:NetworkManager-1.18.0-5.el7_7.1.x86_64                 144/314
-    openstack:  
-    openstack:   Verifying  : libndp-1.2-9.el7.x86_64                                  145/314
-    openstack:  
-    openstack:   Verifying  : libcap-2.22-10.el7.x86_64                                146/314
-    openstack:  
-    openstack:   Verifying  : 12:dhcp-common-4.2.5-77.el7.centos.x86_64                147/314
-    openstack:  
-    openstack:   Verifying  : glibc-2.17-292.el7.x86_64                                148/314
-    openstack:  
-    openstack:   Verifying  : libcurl-7.29.0-54.el7.x86_64                             149/314
-    openstack:  
-    openstack:   Verifying  : libseccomp-2.4.1-0.el7.x86_64                            150/314
-    openstack:  
-    openstack:   Verifying  : rpcbind-0.2.0-48.el7.x86_64                              151/314
-    openstack:  
-    openstack:   Verifying  : curl-7.29.0-54.el7.x86_64                                152/314
-    openstack:  
-    openstack:   Verifying  : 3:irqbalance-1.0.7-12.el7.x86_64                         153/314
-    openstack:  
-    openstack:   Verifying  : yum-plugin-fastestmirror-1.1.31-52.el7.noarch            154/314
-    openstack:  
-    openstack:   Verifying  : python-firewall-0.6.3-2.el7_7.2.noarch                   155/314
-    openstack:  
-    openstack:   Verifying  : libtdb-1.3.16-1.el7.x86_64                               156/314
-    openstack:  
-    openstack:   Verifying  : elfutils-libelf-0.176-2.el7.x86_64                       157/314
-    openstack:  
-    openstack:   Verifying  : rpm-libs-4.11.3-40.el7.x86_64                            158/314
-    openstack:  
-    openstack:   Verifying  : 12:dhclient-4.2.5-77.el7.centos.x86_64                   159/314
-    openstack:  
-    openstack:   Verifying  : 1:quota-nls-4.01-19.el7.noarch                           160/314
-    openstack:  
-    openstack:   Verifying  : rpm-python-4.11.3-35.el7.x86_64                          161/314 
-    openstack:   Verifying  : nss-pem-1.0.3-5.el7_6.1.x86_64                           162/314 
-    openstack:   Verifying  : iproute-4.11.0-14.el7_6.2.x86_64                         163/314 
-    openstack:   Verifying  : libblkid-2.23.2-59.el7_6.1.x86_64                        164/314 
-    openstack:   Verifying  : 3:irqbalance-1.0.7-11.el7.x86_64                         165/314 
-    openstack:   Verifying  : open-vm-tools-10.2.5-3.el7.x86_64                        166/314
-    openstack:  
-    openstack:   Verifying  : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                 167/314 
-    openstack:   Verifying  : libcurl-7.29.0-51.el7.x86_64                             168/314 
-    openstack:   Verifying  : teamd-1.27-5.el7.x86_64                                  169/314 
-    openstack:   Verifying  : cryptsetup-libs-2.0.3-3.el7.x86_64                       170/314 
-    openstack:   Verifying  : 2:vim-minimal-7.4.160-5.el7.x86_64                       171/314 
-    openstack:   Verifying  : 1:grub2-common-2.02-0.76.el7.centos.1.noarch             172/314 
-    openstack:   Verifying  : GeoIP-1.5.0-13.el7.x86_64                                173/314 
-    openstack:   Verifying  : firewalld-0.5.3-5.el7.noarch                             174/314
-    openstack:  
-    openstack:   Verifying  : 1:dmidecode-3.1-2.el7.x86_64                             175/314 
-    openstack:   Verifying  : glibc-common-2.17-260.el7_6.5.x86_64                     176/314 
-    openstack:   Verifying  : e2fsprogs-libs-1.42.9-13.el7.x86_64                      177/314 
-    openstack:   Verifying  : 12:dhcp-libs-4.2.5-68.el7.centos.1.x86_64                178/314 
-    openstack:   Verifying  : glibc-2.17-260.el7_6.5.x86_64                            179/314 
-    openstack:   Verifying  : ipset-libs-6.38-3.el7_6.x86_64                           180/314 
-    openstack:   Verifying  : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64              181/314 
-    openstack:   Verifying  : libtalloc-2.1.13-1.el7.x86_64                            182/314
-    openstack:  
-    openstack:   Verifying  : libtevent-0.9.36-1.el7.x86_64                            183/314 
-    openstack:   Verifying  : kernel-tools-libs-3.10.0-957.12.2.el7.x86_64             184/314 
-    openstack:   Verifying  : 1:make-3.82-23.el7.x86_64                                185/314 
-    openstack:   Verifying  : 7:device-mapper-1.02.149-10.el7_6.7.x86_64               186/314 
-    openstack:   Verifying  : cronie-anacron-1.4.11-20.el7_6.x86_64                    187/314 
-    openstack:   Verifying  : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64            188/314 
-    openstack:   Verifying  : openssh-7.4p1-16.el7.x86_64                              189/314
-    openstack:  
-    openstack:   Verifying  : python-pyudev-0.15-9.el7.noarch                          190/314 
-    openstack:   Verifying  : systemd-libs-219-62.el7_6.6.x86_64                       191/314 
-    openstack:   Verifying  : readline-6.2-10.el7.x86_64                               192/314 
-    openstack:   Verifying  : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64             193/314 
-    openstack:   Verifying  : lshw-B.02.18-12.el7.x86_64                               194/314 
-    openstack:   Verifying  : 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64                 195/314 
-    openstack:   Verifying  : rsyslog-8.24.0-34.el7.x86_64                             196/314
-    openstack:  
-    openstack:   Verifying  : kpartx-0.4.9-123.el7.x86_64                              197/314 
-    openstack:   Verifying  : nss-tools-3.36.0-7.1.el7_6.x86_64                        198/314 
-    openstack:   Verifying  : nspr-4.19.0-1.el7_5.x86_64                               199/314 
-    openstack:   Verifying  : bash-4.2.46-31.el7.x86_64                                200/314 
-    openstack:   Verifying  : rpm-libs-4.11.3-35.el7.x86_64                            201/314 
-    openstack:   Verifying  : openssh-server-7.4p1-16.el7.x86_64                       202/314 
-    openstack:   Verifying  : libtdb-1.3.15-1.el7.x86_64                               203/314 
-    openstack:   Verifying  : libmount-2.23.2-59.el7_6.1.x86_64                        204/314 
-    openstack:   Verifying  : libstdc++-4.8.5-36.el7_6.2.x86_64                        205/314
-    openstack:  
-    openstack:   Verifying  : initscripts-9.49.46-1.el7.x86_64                         206/314 
-    openstack:   Verifying  : libldb-1.3.4-1.el7.x86_64                                207/314 
-    openstack:   Verifying  : krb5-libs-1.15.1-37.el7_6.x86_64                         208/314 
-    openstack:   Verifying  : hwdata-0.252-9.1.el7.x86_64                              209/314 
-    openstack:   Verifying  : nss-sysinit-3.36.0-7.1.el7_6.x86_64                      210/314 
-    openstack:   Verifying  : 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64              211/314 
-    openstack:   Verifying  : coreutils-8.22-23.el7.x86_64                             212/314 
-    openstack:   Verifying  : rpm-build-libs-4.11.3-35.el7.x86_64                      213/314
-    openstack:  
-    openstack:   Verifying  : nss-3.36.0-7.1.el7_6.x86_64                              214/314 
-    openstack:   Verifying  : 1:openssl-1.0.2k-16.el7_6.1.x86_64                       215/314 
-    openstack:   Verifying  : elfutils-libelf-0.172-2.el7.x86_64                       216/314 
-    openstack:   Verifying  : 12:dhcp-common-4.2.5-68.el7.centos.1.x86_64              217/314 
-    openstack:   Verifying  : samba-client-libs-4.8.3-4.el7.x86_64                     218/314 
-    openstack:   Verifying  : 1:nfs-utils-1.3.0-0.61.el7.x86_64                        219/314 
-    openstack:   Verifying  : lz4-1.7.5-2.el7.x86_64                                   220/314 
-    openstack:   Verifying  : rpcbind-0.2.0-47.el7.x86_64                              221/314
-    openstack:  
-    openstack:   Verifying  : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch       222/314 
-    openstack:   Verifying  : audit-libs-2.8.4-4.el7.x86_64                            223/314 
-    openstack:   Verifying  : util-linux-2.23.2-59.el7_6.1.x86_64                      224/314 
-    openstack:   Verifying  : elfutils-libs-0.172-2.el7.x86_64                         225/314 
-    openstack:   Verifying  : libsmartcols-2.23.2-59.el7_6.1.x86_64                    226/314 
-    openstack:   Verifying  : 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64        227/314 
-    openstack:   Verifying  : python-linux-procfs-0.4.9-4.el7.noarch                   228/314 
-    openstack:   Verifying  : tuned-2.10.0-6.el7_6.3.noarch                            229/314
-    openstack:  
-    openstack:   Verifying  : yum-utils-1.1.31-50.el7.noarch                           230/314 
-    openstack:   Verifying  : cronie-1.4.11-20.el7_6.x86_64                            231/314 
-    openstack:   Verifying  : yum-3.4.3-161.el7.centos.noarch                          232/314 
-    openstack:   Verifying  : systemd-219-62.el7_6.6.x86_64                            233/314 
-    openstack:   Verifying  : audit-2.8.4-4.el7.x86_64                                 234/314 
-    openstack:   Verifying  : libdrm-2.4.91-3.el7.x86_64                               235/314 
-    openstack:   Verifying  : firewalld-filesystem-0.5.3-5.el7.noarch                  236/314
-    openstack:  
-    openstack:   Verifying  : libssh2-1.4.3-12.el7_6.2.x86_64                          237/314 
-    openstack:   Verifying  : kmod-libs-20-23.el7.x86_64                               238/314 
-    openstack:   Verifying  : libdb-utils-5.3.21-24.el7.x86_64                         239/314 
-    openstack:   Verifying  : 1:grub2-2.02-0.76.el7.centos.1.x86_64                    240/314 
-    openstack:   Verifying  : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                     241/314 
-    openstack:   Verifying  : libseccomp-2.3.1-3.el7.x86_64                            242/314 
-    openstack:   Verifying  : hostname-3.13-3.el7.x86_64                               243/314
-    openstack:  
-    openstack:   Verifying  : systemd-sysv-219-62.el7_6.6.x86_64                       244/314 
-    openstack:   Verifying  : kernel-tools-3.10.0-957.12.2.el7.x86_64                  245/314 
-    openstack:   Verifying  : dracut-033-554.el7.x86_64                                246/314 
-    openstack:   Verifying  : policycoreutils-2.5-29.el7_6.1.x86_64                    247/314 
-    openstack:   Verifying  : passwd-0.79-4.el7.x86_64                                 248/314 
-    openstack:   Verifying  : tzdata-2019a-1.el7.noarch                                249/314 
-    openstack:   Verifying  : sudo-1.8.23-3.el7.x86_64                                 250/314 
-    openstack:   Verifying  : glib2-2.56.1-2.el7.x86_64                                251/314
-    openstack:  
-    openstack:   Verifying  : biosdevname-0.7.3-1.el7.x86_64                           252/314 
-    openstack:   Verifying  : rpm-4.11.3-35.el7.x86_64                                 253/314 
-    openstack:   Verifying  : binutils-2.27-34.base.el7.x86_64                         254/314 
-    openstack:   Verifying  : libuuid-2.23.2-59.el7_6.1.x86_64                         255/314 
-    openstack:   Verifying  : sg3_utils-1.37-17.el7.x86_64                             256/314 
-    openstack:   Verifying  : libgomp-4.8.5-36.el7_6.2.x86_64                          257/314 
-    openstack:   Verifying  : linux-firmware-20180911-69.git85c5d90.el7.noarch         258/314
-    openstack:  
-    openstack:   Verifying  : selinux-policy-3.13.1-229.el7_6.12.noarch                259/314 
-    openstack:   Verifying  : libdb-5.3.21-24.el7.x86_64                               260/314 
-    openstack:   Verifying  : numactl-libs-2.0.9-7.el7.x86_64                          261/314 
-    openstack:   Verifying  : kmod-20-23.el7.x86_64                                    262/314 
-    openstack:   Verifying  : libicu-50.1.2-17.el7.x86_64                              263/314 
-    openstack:   Verifying  : elfutils-default-yama-scope-0.172-2.el7.noarch           264/314 
-    openstack:   Verifying  : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64          265/314 
-    openstack:   Verifying  : libcom_err-1.42.9-13.el7.x86_64                          266/314
-    openstack:  
-    openstack:   Verifying  : samba-common-4.8.3-4.el7.noarch                          267/314 
-    openstack:   Verifying  : python-2.7.5-77.el7_6.x86_64                             268/314 
-    openstack:   Verifying  : python-firewall-0.5.3-5.el7.noarch                       269/314 
-    openstack:   Verifying  : 1:quota-4.01-17.el7.x86_64                               270/314 
-    openstack:   Verifying  : iptables-1.4.21-28.el7.x86_64                            271/314 
-    openstack:   Verifying  : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                  272/314 
-    openstack:   Verifying  : libteam-1.27-5.el7.x86_64                                273/314 
-    openstack:   Verifying  : python-perf-3.10.0-957.12.2.el7.x86_64                   274/314
-    openstack:  
-    openstack:   Verifying  : polkit-0.112-18.el7_6.1.x86_64                           275/314 
-    openstack:   Verifying  : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                 276/314 
-    openstack:   Verifying  : openssh-clients-7.4p1-16.el7.x86_64                      277/314 
-    openstack:   Verifying  : 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64      278/314 
-    openstack:   Verifying  : freetype-2.8-12.el7_6.1.x86_64                           279/314 
-    openstack:   Verifying  : ipset-6.38-3.el7_6.x86_64                                280/314 
-    openstack:   Verifying  : nss-softokn-3.36.0-5.el7_5.x86_64                        281/314 
-    openstack:   Verifying  : 2:ethtool-4.8-9.el7.x86_64                               282/314
-    openstack:  
-    openstack:   Verifying  : libtirpc-0.2.4-0.15.el7.x86_64                           283/314 
-    openstack:   Verifying  : 32:bind-license-9.9.4-73.el7_6.noarch                    284/314 
-    openstack:   Verifying  : sg3_utils-libs-1.37-17.el7.x86_64                        285/314 
-    openstack:   Verifying  : libmspack-0.5-0.6.alpha.el7.x86_64                       286/314 
-    openstack:   Verifying  : samba-common-libs-4.8.3-4.el7.x86_64                     287/314 
-    openstack:   Verifying  : procps-ng-3.3.10-23.el7.x86_64                           288/314 
-    openstack:   Verifying  : iprutils-2.4.16.1-1.el7.x86_64                           289/314
-    openstack:  
-    openstack:   Verifying  : nss-util-3.36.0-1.1.el7_6.x86_64                         290/314 
-    openstack:   Verifying  : 12:dhclient-4.2.5-68.el7.centos.1.x86_64                 291/314 
-    openstack:   Verifying  : libss-1.42.9-13.el7.x86_64                               292/314 
-    openstack:   Verifying  : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                  293/314 
-    openstack:   Verifying  : yum-plugin-fastestmirror-1.1.31-50.el7.noarch            294/314 
-    openstack:   Verifying  : libgcc-4.8.5-36.el7_6.2.x86_64                           295/314 
-    openstack:   Verifying  : parted-3.1-29.el7.x86_64                                 296/314 
-    openstack:   Verifying  : chrony-3.2-2.el7.x86_64                                  297/314
-    openstack:  
-    openstack:   Verifying  : centos-release-7-6.1810.2.el7.centos.x86_64              298/314 
-    openstack:   Verifying  : libwbclient-4.8.3-4.el7.x86_64                           299/314 
-    openstack:   Verifying  : 1:quota-nls-4.01-17.el7.noarch                           300/314 
-    openstack:   Verifying  : 1:cups-libs-1.6.3-35.el7.x86_64                          301/314 
-    openstack:   Verifying  : python-libs-2.7.5-77.el7_6.x86_64                        302/314 
-    openstack:   Verifying  : libcap-2.22-9.el7.x86_64                                 303/314 
-    openstack:   Verifying  : 1:NetworkManager-1.12.0-10.el7_6.x86_64                  304/314 
-    openstack:   Verifying  : gssproxy-0.7.0-21.el7.x86_64                             305/314
-    openstack:  
-    openstack:   Verifying  : libndp-1.2-7.el7.x86_64                                  306/314 
-    openstack:   Verifying  : 10:qemu-guest-agent-2.12.0-2.el7.x86_64                  307/314 
-    openstack:   Verifying  : e2fsprogs-1.42.9-13.el7.x86_64                           308/314 
-    openstack:   Verifying  : xfsprogs-4.5.0-19.el7_6.x86_64                           309/314 
-    openstack:   Verifying  : 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch         310/314 
-    openstack:   Verifying  : curl-7.29.0-51.el7.x86_64                                311/314 
-    openstack:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                      312/314
-    openstack:  
-    openstack:   Verifying  : grubby-8.28-25.el7.x86_64                                313/314 
-    openstack:   Verifying  : diffutils-3.3-4.el7.x86_64                               314/314
+    openstack:   Verifying  : grubby-8.28-25.el7.x86_64                                315/316 
+    openstack:   Verifying  : diffutils-3.3-4.el7.x86_64                               316/316
     openstack:  
     openstack: 
     openstack: Installed:
-    openstack:   kernel.x86_64 0:3.10.0-1062.4.1.el7    python2-chardet.noarch 0:3.0.4-7.el7  
+    openstack:   kernel.x86_64 0:3.10.0-1062.9.1.el7    python2-chardet.noarch 0:3.0.4-7.el7  
     openstack:   python2-pyudev.noarch 0:0.18.1-6.el7  
     openstack: 
     openstack: Dependency Installed:
@@ -1873,6 +1877,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   bind-license.noarch 32:9.11.4-9.P2.el7                                        
     openstack:   binutils.x86_64 0:2.27-41.base.el7_7.1                                        
     openstack:   biosdevname.x86_64 0:0.7.3-2.el7                                              
+    openstack:   ca-certificates.noarch 0:2019.2.32-76.el7_7                                   
     openstack:   centos-release.x86_64 0:7-7.1908.0.el7.centos                                 
     openstack:   chrony.x86_64 0:3.4-1.el7                                                     
     openstack:   coreutils.x86_64 0:8.22-24.el7                                                
@@ -1880,7 +1885,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   cronie-anacron.x86_64 0:1.4.11-23.el7                                         
     openstack:   cryptsetup-libs.x86_64 0:2.0.3-5.el7                                          
     openstack:   cups-libs.x86_64 1:1.6.3-40.el7                                               
-    openstack:   curl.x86_64 0:7.29.0-54.el7                                                   
+    openstack:   curl.x86_64 0:7.29.0-54.el7_7.1                                               
     openstack:   device-mapper.x86_64 7:1.02.158-2.el7_7.2                                     
     openstack:   device-mapper-libs.x86_64 7:1.02.158-2.el7_7.2                                
     openstack:   dhclient.x86_64 12:4.2.5-77.el7.centos                                        
@@ -1913,22 +1918,22 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   hostname.x86_64 0:3.13-3.el7_7.1                                              
     openstack:   hwdata.x86_64 0:0.252-9.3.el7                                                 
     openstack:   initscripts.x86_64 0:9.49.47-1.el7                                            
-    openstack:   iproute.x86_64 0:4.11.0-25.el7                                                
+    openstack:   iproute.x86_64 0:4.11.0-25.el7_7.2                                            
     openstack:   iprutils.x86_64 0:2.4.17.1-2.el7                                              
     openstack:   ipset.x86_64 0:7.1-1.el7                                                      
     openstack:   ipset-libs.x86_64 0:7.1-1.el7                                                 
     openstack:   iptables.x86_64 0:1.4.21-33.el7                                               
     openstack:   irqbalance.x86_64 3:1.0.7-12.el7                                              
-    openstack:   kernel-tools.x86_64 0:3.10.0-1062.4.1.el7                                     
-    openstack:   kernel-tools-libs.x86_64 0:3.10.0-1062.4.1.el7                                
+    openstack:   kernel-tools.x86_64 0:3.10.0-1062.9.1.el7                                     
+    openstack:   kernel-tools-libs.x86_64 0:3.10.0-1062.9.1.el7                                
     openstack:   kmod.x86_64 0:20-25.el7                                                       
     openstack:   kmod-libs.x86_64 0:20-25.el7                                                  
     openstack:   kpartx.x86_64 0:0.4.9-127.el7                                                 
     openstack:   krb5-libs.x86_64 0:1.15.1-37.el7_7.2                                          
-    openstack:   libblkid.x86_64 0:2.23.2-61.el7                                               
+    openstack:   libblkid.x86_64 0:2.23.2-61.el7_7.1                                           
     openstack:   libcap.x86_64 0:2.22-10.el7                                                   
     openstack:   libcom_err.x86_64 0:1.42.9-16.el7                                             
-    openstack:   libcurl.x86_64 0:7.29.0-54.el7                                                
+    openstack:   libcurl.x86_64 0:7.29.0-54.el7_7.1                                            
     openstack:   libdb.x86_64 0:5.3.21-25.el7                                                  
     openstack:   libdb-utils.x86_64 0:5.3.21-25.el7                                            
     openstack:   libdrm.x86_64 0:2.4.97-2.el7                                                  
@@ -1936,11 +1941,11 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   libgomp.x86_64 0:4.8.5-39.el7                                                 
     openstack:   libicu.x86_64 0:50.2-3.el7                                                    
     openstack:   libldb.x86_64 0:1.4.2-1.el7                                                   
-    openstack:   libmount.x86_64 0:2.23.2-61.el7                                               
+    openstack:   libmount.x86_64 0:2.23.2-61.el7_7.1                                           
     openstack:   libmspack.x86_64 0:0.5-0.7.alpha.el7                                          
     openstack:   libndp.x86_64 0:1.2-9.el7                                                     
     openstack:   libseccomp.x86_64 0:2.4.1-0.el7                                               
-    openstack:   libsmartcols.x86_64 0:2.23.2-61.el7                                           
+    openstack:   libsmartcols.x86_64 0:2.23.2-61.el7_7.1                                       
     openstack:   libss.x86_64 0:1.42.9-16.el7                                                  
     openstack:   libssh2.x86_64 0:1.8.0-3.el7                                                  
     openstack:   libstdc++.x86_64 0:4.8.5-39.el7                                               
@@ -1949,8 +1954,8 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   libteam.x86_64 0:1.27-9.el7                                                   
     openstack:   libtevent.x86_64 0:0.9.37-1.el7                                               
     openstack:   libtirpc.x86_64 0:0.2.4-0.16.el7                                              
-    openstack:   libuuid.x86_64 0:2.23.2-61.el7                                                
-    openstack:   libwbclient.x86_64 0:4.9.1-6.el7                                              
+    openstack:   libuuid.x86_64 0:2.23.2-61.el7_7.1                                            
+    openstack:   libwbclient.x86_64 0:4.9.1-10.el7_7                                           
     openstack:   linux-firmware.noarch 0:20190429-72.gitddde598.el7                            
     openstack:   lshw.x86_64 0:B.02.18-13.el7                                                  
     openstack:   lz4.x86_64 0:1.7.5-3.el7                                                      
@@ -1965,7 +1970,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   nss-sysinit.x86_64 0:3.44.0-4.el7                                             
     openstack:   nss-tools.x86_64 0:3.44.0-4.el7                                               
     openstack:   nss-util.x86_64 0:3.44.0-3.el7                                                
-    openstack:   numactl-libs.x86_64 0:2.0.12-3.el7                                            
+    openstack:   numactl-libs.x86_64 0:2.0.12-3.el7_7.1                                        
     openstack:   open-vm-tools.x86_64 0:10.3.0-2.el7                                           
     openstack:   openssh.x86_64 0:7.4p1-21.el7                                                 
     openstack:   openssh-clients.x86_64 0:7.4p1-21.el7                                         
@@ -1981,7 +1986,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   python-firewall.noarch 0:0.6.3-2.el7_7.2                                      
     openstack:   python-libs.x86_64 0:2.7.5-86.el7                                             
     openstack:   python-linux-procfs.noarch 0:0.4.11-4.el7                                     
-    openstack:   python-perf.x86_64 0:3.10.0-1062.4.1.el7                                      
+    openstack:   python-perf.x86_64 0:3.10.0-1062.9.1.el7                                      
     openstack:   qemu-guest-agent.x86_64 10:2.12.0-3.el7                                       
     openstack:   quota.x86_64 1:4.01-19.el7                                                    
     openstack:   quota-nls.noarch 1:4.01-19.el7                                                
@@ -1992,11 +1997,11 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   rpm-libs.x86_64 0:4.11.3-40.el7                                               
     openstack:   rpm-python.x86_64 0:4.11.3-40.el7                                             
     openstack:   rsyslog.x86_64 0:8.24.0-41.el7_7.2                                            
-    openstack:   samba-client-libs.x86_64 0:4.9.1-6.el7                                        
-    openstack:   samba-common.noarch 0:4.9.1-6.el7                                             
-    openstack:   samba-common-libs.x86_64 0:4.9.1-6.el7                                        
-    openstack:   selinux-policy.noarch 0:3.13.1-252.el7.1                                      
-    openstack:   selinux-policy-targeted.noarch 0:3.13.1-252.el7.1                             
+    openstack:   samba-client-libs.x86_64 0:4.9.1-10.el7_7                                     
+    openstack:   samba-common.noarch 0:4.9.1-10.el7_7                                          
+    openstack:   samba-common-libs.x86_64 0:4.9.1-10.el7_7                                     
+    openstack:   selinux-policy.noarch 0:3.13.1-252.el7_7.6                                    
+    openstack:   selinux-policy-targeted.noarch 0:3.13.1-252.el7_7.6                           
     openstack:   sg3_utils.x86_64 0:1.37-18.el7_7.1                                            
     openstack:   sg3_utils-libs.x86_64 0:1.37-18.el7_7.1                                       
     openstack:   shadow-utils.x86_64 2:4.6-5.el7                                               
@@ -2007,7 +2012,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack:   teamd.x86_64 0:1.27-9.el7                                                     
     openstack:   tuned.noarch 0:2.11.0-5.el7_7.1                                               
     openstack:   tzdata.noarch 0:2019c-1.el7                                                   
-    openstack:   util-linux.x86_64 0:2.23.2-61.el7                                             
+    openstack:   util-linux.x86_64 0:2.23.2-61.el7_7.1                                         
     openstack:   vim-minimal.x86_64 2:7.4.629-6.el7                                            
     openstack:   xfsprogs.x86_64 0:4.5.0-20.el7                                                
     openstack:   yum.noarch 0:3.4.3-163.el7.centos                                             
@@ -2020,13 +2025,13 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Complete!
     openstack: Loaded plugins: fastestmirror
     openstack: Loading mirror speeds from cached hostfile
-    openstack:  * base: mozart.ee.ic.ac.uk
-    openstack:  * centos-ceph-nautilus: mozart.ee.ic.ac.uk
-    openstack:  * centos-nfs-ganesha28: mirror.ox.ac.uk
-    openstack:  * centos-openstack-train: mozart.ee.ic.ac.uk
-    openstack:  * centos-qemu-ev: mirror.ox.ac.uk
-    openstack:  * extras: mozart.ee.ic.ac.uk
-    openstack:  * updates: mirrors.coreix.net
+    openstack:  * base: mirror.strencom.net
+    openstack:  * centos-ceph-nautilus: mirror.netweaver.uk
+    openstack:  * centos-nfs-ganesha28: centos.mirrors.nublue.co.uk
+    openstack:  * centos-openstack-train: mirror.netweaver.uk
+    openstack:  * centos-qemu-ev: centos.serverspace.co.uk
+    openstack:  * extras: repo.uk.bigstepcloud.com
+    openstack:  * updates: repo.uk.bigstepcloud.com
     openstack: Resolving Dependencies
     openstack: --> Running transaction check
     openstack: ---> Package openstack-packstack.noarch 1:15.0.0-0.1.0rc1.el7 will be installed
@@ -2498,7 +2503,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Installed size: 134 M
     openstack: Downloading packages:
     openstack: --------------------------------------------------------------------------------
-    openstack: Total                                              6.4 MB/s |  36 MB  00:05     
+    openstack: Total                                              6.8 MB/s |  36 MB  00:05     
     openstack: Running transaction check
     openstack: Running transaction test
     openstack: Transaction test succeeded
@@ -3186,7 +3191,7 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Complete!
     openstack: Welcome to the Packstack setup utility
     openstack: 
-    openstack: The installation log file is available at: /var/tmp/packstack/20191105-180458-W0tdtv/openstack-setup.log
+    openstack: The installation log file is available at: /var/tmp/packstack/20191211-130705-EAs1eH/openstack-setup.log
     openstack: Packstack changed given value  to required value /root/.ssh/id_rsa.pub
     openstack: 
     openstack: Installing:
@@ -3229,12 +3234,12 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: Preparing Aodh entries                               [ [32mDONE[0m ]
     openstack: Preparing Puppet manifests                           [ [32mDONE[0m ]
     openstack: Copying Puppet modules and manifests                 [ [32mDONE[0m ]
-    openstack: Applying 192.168.121.205_controller.pp
-    openstack: 192.168.121.205_controller.pp:                       [ [32mDONE[0m ]
-    openstack: Applying 192.168.121.205_network.pp
-    openstack: 192.168.121.205_network.pp:                          [ [32mDONE[0m ]
-    openstack: Applying 192.168.121.205_compute.pp
-    openstack: 192.168.121.205_compute.pp:                          [ [32mDONE[0m ]
+    openstack: Applying 192.168.121.129_controller.pp
+    openstack: 192.168.121.129_controller.pp:                       [ [32mDONE[0m ]
+    openstack: Applying 192.168.121.129_network.pp
+    openstack: 192.168.121.129_network.pp:                          [ [32mDONE[0m ]
+    openstack: Applying 192.168.121.129_compute.pp
+    openstack: 192.168.121.129_compute.pp:                          [ [32mDONE[0m ]
     openstack: Applying Puppet manifests                            [ [32mDONE[0m ]
     openstack: Finalizing                                           [ [32mDONE[0m ]
     openstack: 
@@ -3242,19 +3247,19 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: 
     openstack: Additional information:
     openstack:  * [0;31mParameter CONFIG_NEUTRON_L2_AGENT: You have chosen OVN Neutron backend. Note that this backend does not support the VPNaaS or FWaaS services. Geneve will be used as the encapsulation method for tenant networks[0m
-    openstack:  * A new answerfile was created in: /root/packstack-answers-20191105-180459.txt
+    openstack:  * A new answerfile was created in: /root/packstack-answers-20191211-130706.txt
     openstack:  * Time synchronization installation was skipped. Please note that unsynchronized time on server instances might be problem for some OpenStack components.
-    openstack:  * File /root/keystonerc_admin has been created on OpenStack client host 192.168.121.205. To use the command line tools you need to source the file.
-    openstack:  * To access the OpenStack Dashboard browse to http://192.168.121.205/dashboard .
+    openstack:  * File /root/keystonerc_admin has been created on OpenStack client host 192.168.121.129. To use the command line tools you need to source the file.
+    openstack:  * To access the OpenStack Dashboard browse to http://192.168.121.129/dashboard .
     openstack: Please, find your login credentials stored in the keystonerc_admin in your home directory.
-    openstack:  * Because of the kernel update the host 192.168.121.205 requires reboot.
-    openstack:  * The installation log file is available at: /var/tmp/packstack/20191105-180458-W0tdtv/openstack-setup.log
-    openstack:  * The generated manifests are available at: /var/tmp/packstack/20191105-180458-W0tdtv/manifests
+    openstack:  * Because of the kernel update the host 192.168.121.129 requires reboot.
+    openstack:  * The installation log file is available at: /var/tmp/packstack/20191211-130705-EAs1eH/openstack-setup.log
+    openstack:  * The generated manifests are available at: /var/tmp/packstack/20191211-130705-EAs1eH/manifests
     openstack: unset OS_SERVICE_TOKEN
     openstack:     export OS_USERNAME=admin
-    openstack:     export OS_PASSWORD='6e4deec10ab0405e'
+    openstack:     export OS_PASSWORD='bed9b164cfc14650'
     openstack:     export OS_REGION_NAME=RegionOne
-    openstack:     export OS_AUTH_URL=http://192.168.121.205:5000/v3
+    openstack:     export OS_AUTH_URL=http://192.168.121.129:5000/v3
     openstack:     export PS1='[\u@\h \W(keystone_admin)]\$ '
     openstack:     
     openstack: export OS_PROJECT_NAME=admin
@@ -3262,4 +3267,4 @@ Bringing machine 'openstack' up with 'libvirt' provider...
     openstack: export OS_PROJECT_DOMAIN_NAME=Default
     openstack: export OS_IDENTITY_API_VERSION=3
     openstack:     
-STOP:  Tue 5 Nov 18:33:40 GMT 2019
+STOP:  Wed Dec 11 13:37:15 GMT 2019
